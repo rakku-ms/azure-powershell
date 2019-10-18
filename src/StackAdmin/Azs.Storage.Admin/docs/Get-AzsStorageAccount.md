@@ -14,7 +14,7 @@ Returns the requested storage account.
 
 ### Get (Default)
 ```
-Get-AzsStorageAccount -AccountId <String> -FarmId <String> -ResourceGroupName <String>
+Get-AzsStorageAccount -AccountId <String> -FarmName <String> -ResourceGroupName <String>
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
 ```
 
@@ -26,7 +26,7 @@ Get-AzsStorageAccount -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSO
 
 ### List
 ```
-Get-AzsStorageAccount -FarmId <String> -ResourceGroupName <String> -Summary [-SubscriptionId <String[]>]
+Get-AzsStorageAccount -FarmName <String> -ResourceGroupName <String> -Summary [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
 ```
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmId
+### -FarmName
 Farm Id.
 
 ```yaml

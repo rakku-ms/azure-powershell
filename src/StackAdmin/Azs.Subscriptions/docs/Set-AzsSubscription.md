@@ -14,15 +14,15 @@ Create or updates a subscription.
 
 ### UpdateExpanded (Default)
 ```
-Set-AzsSubscription [-Id <String>] [-SubscriptionId <String>] [-DisplayName <String>] [-OfferId <String>]
+Set-AzsSubscription [-SubscriptionId <String>] [-DisplayName <String>] [-Id <String>] [-OfferId <String>]
  [-State <SubscriptionState>] [-SubscriptionId1 <String>] [-TenantId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzsSubscription -Id <String> -NewSubscription <ISubscription> [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Set-AzsSubscription -NewSubscription <ISubscription> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,14 +83,14 @@ Dynamic: False
 ```
 
 ### -Id
-Id of the subscription.
+Fully qualified identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases: SubscriptionId
+Parameter Sets: UpdateExpanded
+Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -152,7 +152,7 @@ Id of the subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False

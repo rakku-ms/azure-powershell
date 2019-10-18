@@ -50,12 +50,18 @@ require:
   - $(this-folder)/../readme.azurestack.md
   - $(repo)/specification/azsadmin/resource-manager/user-subscriptions/readme.azsautogen.md
   - $(repo)/specification/azsadmin/resource-manager/user-subscriptions/readme.md
+```
 
+``` yaml
 subject-prefix: ''
 module-version: 0.0.1
+sanitize-names: false
+```
 
+``` yaml
 ### File Renames 
 module-name: Azs.Subscriptions 
 csproj: Azs.Subscriptions.csproj 
 psd1: Azs.Subscriptions.psd1 
 psm1: Azs.Subscriptions.psm1
+```

@@ -14,8 +14,8 @@ Delete the specified subscription.
 
 ### Delete (Default)
 ```
-Remove-AzsSubscription -Id <String> [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Remove-AzsSubscription [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### DeleteViaIdentity
@@ -65,22 +65,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Id
-Id of the subscription.
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases: SubscriptionId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
@@ -109,6 +93,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -SubscriptionId
+Id of the subscription.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

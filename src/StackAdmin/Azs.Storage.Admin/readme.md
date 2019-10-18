@@ -50,8 +50,10 @@ require:
   - $(this-folder)/../readme.azurestack.md
   - $(repo)/specification/azsadmin/resource-manager/storage/readme.azsautogen.md
   - $(repo)/specification/azsadmin/resource-manager/storage/readme.md
+```
 
-subject-prefix: ''
+``` yaml
+subject-prefix: 'Storage'
 module-version: 0.0.1
 
 ### File Renames 
@@ -59,3 +61,12 @@ module-name: Azs.Storage.Admin
 csproj: Azs.Storage.Admin.csproj 
 psd1: Azs.Storage.Admin.psd1 
 psm1: Azs.Storage.Admin.psm1
+```
+
+### Parameter default values
+``` yaml
+directive:
+  - where:
+      parameter-name: FarmId
+    set:
+      parameter-name: FarmName

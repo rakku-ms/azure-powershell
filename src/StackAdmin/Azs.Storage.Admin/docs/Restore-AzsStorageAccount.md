@@ -14,7 +14,7 @@ Undelete a deleted storage account.
 
 ### Undelete (Default)
 ```
-Restore-AzsStorageAccount -AccountId <String> -FarmId <String> -ResourceGroupName <String>
+Restore-AzsStorageAccount -AccountId <String> -FarmName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmId
+### -FarmName
 Farm Id.
 
 ```yaml

@@ -14,15 +14,15 @@ Create or updates a subscription.
 
 ### CreateExpanded (Default)
 ```
-New-AzsSubscription [-Id <String>] [-SubscriptionId <String>] [-DisplayName <String>] [-OfferId <String>]
+New-AzsSubscription [-SubscriptionId <String>] [-DisplayName <String>] [-Id <String>] [-OfferId <String>]
  [-State <SubscriptionState>] [-SubscriptionId1 <String>] [-TenantId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsSubscription -Id <String> -NewSubscription <ISubscription> [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+New-AzsSubscription -NewSubscription <ISubscription> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
@@ -33,8 +33,8 @@ New-AzsSubscription -InputObject <ISubscriptionIdentity> -NewSubscription <ISubs
 
 ### CreateViaIdentityExpanded
 ```
-New-AzsSubscription -InputObject <ISubscriptionIdentity> [-Id <String>] [-SubscriptionId <String>]
- [-DisplayName <String>] [-OfferId <String>] [-State <SubscriptionState>] [-TenantId <String>]
+New-AzsSubscription -InputObject <ISubscriptionIdentity> [-SubscriptionId <String>] [-DisplayName <String>]
+ [-Id <String>] [-OfferId <String>] [-State <SubscriptionState>] [-TenantId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -96,14 +96,14 @@ Dynamic: False
 ```
 
 ### -Id
-Id of the subscription.
+Fully qualified identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
-Aliases: SubscriptionId
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -182,7 +182,7 @@ Id of the subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False

@@ -12,19 +12,19 @@ Gets details about particular subscription.
 
 ## SYNTAX
 
-### List (Default)
+### Get (Default)
 ```
-Get-AzsSubscription [-DefaultProfile <PSObject>] [<CommonParameters>]
-```
-
-### Get
-```
-Get-AzsSubscription -Id <String> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsSubscription [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
 Get-AzsSubscription -InputObject <ISubscriptionIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### List
+```
+Get-AzsSubscription [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,22 +68,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Id
-Id of the subscription.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases: SubscriptionId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
@@ -97,6 +81,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -SubscriptionId
+Id of the subscription.
+
+```yaml
+Type: System.String[]
+Parameter Sets: Get
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
 ```
