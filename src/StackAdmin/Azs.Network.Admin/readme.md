@@ -63,19 +63,13 @@ psm1: Azs.Network.Admin.psm1 # script module file
 ### Parameter default values
 ``` yaml
 directive:
-### Get-AzsNetworkLoadBalancer.ps1, Get-AzsNetworkPublicIPAddress.ps1
   - where:
-      verb: Get
-      parameter-name: Skip
+      subject: Quota
     set:
-      default:
-        script: '-1'
+      subject-prefix: Network
   - where:
-      verb: Get
-      parameter-name: Top
-    set:
-      default:
-        script: '-1'
+      subject: (Location)
+    hide: true
 ### New-AzsNetworkQuota.ps1
   - where:
       verb: New
@@ -120,5 +114,5 @@ directive:
       default:
         script: '50'
 		
-subject-prefix: Network
+subject-prefix: ''
 module-version: 0.0.1

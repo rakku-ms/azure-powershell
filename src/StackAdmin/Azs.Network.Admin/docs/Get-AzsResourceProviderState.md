@@ -1,24 +1,30 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azsnetworkloadbalancer
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azsresourceproviderstate
 schema: 2.0.0
 ---
 
-# Get-AzsNetworkLoadBalancer
+# Get-AzsResourceProviderState
 
 ## SYNOPSIS
-Get a list of all load balancers.
+Get an overview of the state of the network resource provider.
 
 ## SYNTAX
 
+### Get (Default)
 ```
-Get-AzsNetworkLoadBalancer [-SubscriptionId <String[]>] [-Filter <String>] [-InlineCount <String>]
- [-OrderBy <String>] [-Skip <String>] [-Top <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsResourceProviderState [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-AzsResourceProviderState -InputObject <INetworkAdminIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Get a list of all load balancers.
+Get an overview of the state of the network resource provider.
 
 ## EXAMPLES
 
@@ -58,66 +64,19 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Filter
-OData filter parameter.
+### -InputObject
+Identity Parameter
+To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: System.String
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.INetworkAdminIdentity
+Parameter Sets: GetViaIdentity
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -InlineCount
-OData inline count parameter.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -OrderBy
-OData orderBy parameter.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Skip
-OData skip parameter.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: -1
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 Dynamic: False
 ```
@@ -128,7 +87,7 @@ The subscription ID forms part of the URI for every service call.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: Get
 Aliases:
 
 Required: False
@@ -139,34 +98,29 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Top
-OData top parameter.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: -1
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.INetworkAdminIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.ILoadBalancer
+### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IAdminOverview
 
 ## ALIASES
 
 ## NOTES
+
+### COMPLEX PARAMETER PROPERTIES
+To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+#### INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
+  - `[Id <String>]`: Resource identity path
+  - `[Location <String>]`: Location of the resource.
+  - `[ResourceName <String>]`: Name of the resource.
+  - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 ## RELATED LINKS
 

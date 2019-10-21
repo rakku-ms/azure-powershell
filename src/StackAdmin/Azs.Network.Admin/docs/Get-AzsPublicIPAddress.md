@@ -1,24 +1,24 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azsnetworkvirtualnetwork
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azspublicipaddress
 schema: 2.0.0
 ---
 
-# Get-AzsNetworkVirtualNetwork
+# Get-AzsPublicIPAddress
 
 ## SYNOPSIS
-Get a list of all virtual networks.
+List of public ip addresses.
 
 ## SYNTAX
 
 ```
-Get-AzsNetworkVirtualNetwork [-SubscriptionId <String[]>] [-Filter <String>] [-InlineCount <String>]
+Get-AzsPublicIPAddress [-SubscriptionId <String[]>] [-Filter <String>] [-InlineCount <String>]
  [-OrderBy <String>] [-Skip <String>] [-Top <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Get a list of all virtual networks.
+List of public ip addresses.
 
 ## EXAMPLES
 
@@ -116,7 +116,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: -1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -149,7 +149,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: -1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -162,7 +162,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IVirtualNetwork
+### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IPublicIPAddress
 
 ## ALIASES
 

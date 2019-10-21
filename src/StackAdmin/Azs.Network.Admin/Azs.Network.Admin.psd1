@@ -11,7 +11,7 @@
   DotNetFrameworkVersion = '4.7.2'
   RequiredAssemblies = './bin/Azs.Network.Admin.private.dll'
   FormatsToProcess = './Azs.Network.Admin.format.ps1xml'
-  CmdletsToExport = 'Get-AzsNetworkLoadBalancer', 'Get-AzsNetworkLocationsOperation', 'Get-AzsNetworkLocationsOperationResult', 'Get-AzsNetworkOnPremLocation', 'Get-AzsNetworkPublicIPAddress', 'Get-AzsNetworkQuota', 'Get-AzsNetworkResourceProviderState', 'Get-AzsNetworkVirtualNetwork', 'New-AzsNetworkQuota', 'Remove-AzsNetworkQuota', 'Set-AzsNetworkQuota', '*'
+  CmdletsToExport = 'Get-AzsLoadBalancer', 'Get-AzsNetworkQuota', 'Get-AzsPublicIPAddress', 'Get-AzsResourceProviderState', 'Get-AzsVirtualNetwork', 'New-AzsNetworkQuota', 'Remove-AzsNetworkQuota', 'Set-AzsNetworkQuota', '*'
   AliasesToExport = '*'
   PrivateData = @{
     PSData = @{

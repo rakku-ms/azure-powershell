@@ -11,28 +11,19 @@ Locale: en-US
 
 
 ## Azs.Network.Admin Cmdlets
-### [Get-AzsNetworkLoadBalancer](Get-AzsNetworkLoadBalancer.md)
+### [Get-AzsLoadBalancer](Get-AzsLoadBalancer.md)
 Get a list of all load balancers.
-
-### [Get-AzsNetworkLocationsOperation](Get-AzsNetworkLocationsOperation.md)
-Returns the list of support REST operations.
-
-### [Get-AzsNetworkLocationsOperationResult](Get-AzsNetworkLocationsOperationResult.md)
-Returns the list of operation results for a location
-
-### [Get-AzsNetworkOnPremLocation](Get-AzsNetworkOnPremLocation.md)
-Returns the list of supported locations
-
-### [Get-AzsNetworkPublicIPAddress](Get-AzsNetworkPublicIPAddress.md)
-List of public ip addresses.
 
 ### [Get-AzsNetworkQuota](Get-AzsNetworkQuota.md)
 Get a quota by name.
 
-### [Get-AzsNetworkResourceProviderState](Get-AzsNetworkResourceProviderState.md)
+### [Get-AzsPublicIPAddress](Get-AzsPublicIPAddress.md)
+List of public ip addresses.
+
+### [Get-AzsResourceProviderState](Get-AzsResourceProviderState.md)
 Get an overview of the state of the network resource provider.
 
-### [Get-AzsNetworkVirtualNetwork](Get-AzsNetworkVirtualNetwork.md)
+### [Get-AzsVirtualNetwork](Get-AzsVirtualNetwork.md)
 Get a list of all virtual networks.
 
 ### [New-AzsNetworkQuota](New-AzsNetworkQuota.md)
