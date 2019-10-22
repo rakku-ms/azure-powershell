@@ -19,7 +19,7 @@ Get-AzsDelegatedProviderOffer -DelegatedProviderId <String> [-DefaultProfile <PS
 
 ### Get
 ```
-Get-AzsDelegatedProviderOffer -DelegatedProviderId <String> -OfferName <String> [-DefaultProfile <PSObject>]
+Get-AzsDelegatedProviderOffer -DelegatedProviderId <String> -Name <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -OfferName
+### -Name
 Name of the offer.
 
 ```yaml

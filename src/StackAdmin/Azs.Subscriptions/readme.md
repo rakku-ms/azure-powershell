@@ -65,3 +65,12 @@ csproj: Azs.Subscriptions.csproj
 psd1: Azs.Subscriptions.psd1 
 psm1: Azs.Subscriptions.psm1
 ```
+
+### Parameter default values
+``` yaml
+directive:
+  - where:
+      parameter-name: OfferName
+    set:
+      parameter-name: Name
+```

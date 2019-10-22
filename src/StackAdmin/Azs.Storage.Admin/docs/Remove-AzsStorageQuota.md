@@ -92,7 +92,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -199,14 +199,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS

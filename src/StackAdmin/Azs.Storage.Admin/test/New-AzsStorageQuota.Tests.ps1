@@ -11,11 +11,11 @@ Describe 'New-AzsStorageQuota' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'CreateViaIdentityExpanded' {
+    It 'Create' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'Create' {
+    It 'CreateViaIdentityExpanded' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 

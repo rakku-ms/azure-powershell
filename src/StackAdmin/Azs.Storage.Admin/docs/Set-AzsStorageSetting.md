@@ -1,32 +1,32 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/start-azsstoragefarmgarbagecollection
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/set-azsstoragesetting
 schema: 2.0.0
 ---
 
-# Start-AzsStorageFarmGarbageCollection
+# Set-AzsStorageSetting
 
 ## SYNOPSIS
-Start garbage collection on deleted storage objects.
+Update storage resource provider settings.
 
 ## SYNTAX
 
-### Start (Default)
+### UpdateExpanded (Default)
 ```
-Start-AzsStorageFarmGarbageCollection -FarmName <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
+Set-AzsStorageSetting [-Location <String>] [-SubscriptionId <String>]
+ [-RetentionPeriodForDeletedStorageAccountsInDay <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### StartViaIdentity
+### Update
 ```
-Start-AzsStorageFarmGarbageCollection -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AzsStorageSetting -SettingsObject <ISettings> [-Location <String>] [-SubscriptionId <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Start garbage collection on deleted storage objects.
+Update storage resource provider settings.
 
 ## EXAMPLES
 
@@ -50,22 +50,6 @@ PS C:\> {{ Add code here }}
 
 ## PARAMETERS
 
-### -AsJob
-Run the command as a job
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -82,15 +66,31 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmName
-Farm Id.
+### -Location
+Resource location.
 
 ```yaml
 Type: System.String
-Parameter Sets: Start
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: (Get-AzLocation)[0].Name
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -RetentionPeriodForDeletedStorageAccountsInDay
+The number of days a deleted storage account is kept before being permanently deleted.
+
+```yaml
+Type: System.Int32
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -98,13 +98,13 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+### -SettingsObject
+Storage resource provider settings
+To construct, see NOTES section for SETTINGSOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
-Parameter Sets: StartViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.ISettings
+Parameter Sets: Update
 Aliases:
 
 Required: True
@@ -115,60 +115,12 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -NoWait
-Run the command asynchronously
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -ResourceGroupName
-Resource group name.
-
-```yaml
-Type: System.String
-Parameter Sets: Start
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -SubscriptionId
 Subscription Id.
 
 ```yaml
 Type: System.String
-Parameter Sets: Start
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -217,11 +169,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.ISettings
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.ISettings
 
 ## ALIASES
 
@@ -230,17 +182,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
-  - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
-  - `[Id <String>]`: Resource identity path
-  - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
-  - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
-  - `[SubscriptionId <String>]`: Subscription Id.
+#### SETTINGSOBJECT <ISettings>: Storage resource provider settings
+  - `[RetentionPeriodForDeletedStorageAccountsInDay <Int32?>]`: The number of days a deleted storage account is kept before being permanently deleted.
 
 ## RELATED LINKS
 

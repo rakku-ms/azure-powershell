@@ -1,37 +1,30 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/get-azsstoragefarm
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/get-azsstoragesetting
 schema: 2.0.0
 ---
 
-# Get-AzsStorageFarm
+# Get-AzsStorageSetting
 
 ## SYNOPSIS
-Returns the Storage properties and settings for a specified storage farm.
+Returns the storage resource provider settings.
 
 ## SYNTAX
 
-### List (Default)
+### Get (Default)
 ```
-Get-AzsStorageFarm -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+Get-AzsStorageSetting [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
-```
-
-### Get
-```
-Get-AzsStorageFarm -Id <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
- [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzsStorageFarm -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [<CommonParameters>]
+Get-AzsStorageSetting -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns the Storage properties and settings for a specified storage farm.
+Returns the storage resource provider settings.
 
 ## EXAMPLES
 
@@ -71,22 +64,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Id
-Farm Id.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases: FarmId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
@@ -104,33 +81,17 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -PassThru
-Returns true when the command succeeds
+### -Location
+Resource location.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: Get, GetViaIdentity
+Type: System.String
+Parameter Sets: Get
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -ResourceGroupName
-Resource group name.
-
-```yaml
-Type: System.String
-Parameter Sets: Get, List
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -141,7 +102,7 @@ Subscription Id.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: False
@@ -161,7 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IFarm
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.ISettings
 
 ## ALIASES
 
@@ -172,14 +133,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS

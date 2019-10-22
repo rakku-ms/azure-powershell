@@ -14,20 +14,19 @@ Returns the specified storage quota.
 
 ### List (Default)
 ```
-Get-AzsStorageQuota [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-PassThru]
+Get-AzsStorageQuota [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
 ### Get
 ```
 Get-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String[]>]
- [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzsStorageQuota -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [<CommonParameters>]
+Get-AzsStorageQuota -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,23 +97,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -161,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IStorageQuota
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 
 ## ALIASES
 
@@ -172,14 +155,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS

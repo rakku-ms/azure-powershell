@@ -15,28 +15,26 @@ Create or update an existing storage quota.
 ### CreateExpanded (Default)
 ```
 New-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String>]
- [-CapacityInGb <Int32>] [-Id <String>] [-Location1 <String>] [-Name <String>]
- [-NumberOfStorageAccount <Int32>] [-Tag <Hashtable>] [-Type <String>] [-DefaultProfile <PSObject>]
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-CapacityInGb <Int32>] [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Create
 ```
 New-AzsStorageQuota -QuotaName <String> -QuotaObject <IStorageQuota> [-Location <String>]
- [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
 ```
 New-AzsStorageQuota -InputObject <IStorageAdminIdentity> -QuotaObject <IStorageQuota>
- [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
 ```
-New-AzsStorageQuota -InputObject <IStorageAdminIdentity> [-Location <String>] [-CapacityInGb <Int32>]
- [-Id <String>] [-Name <String>] [-NumberOfStorageAccount <Int32>] [-Tag <Hashtable>] [-Type <String>]
- [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+New-AzsStorageQuota -InputObject <IStorageAdminIdentity> [-CapacityInGb <Int32>]
+ [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,22 +94,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Id
-Resource ID.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
@@ -134,44 +116,12 @@ Resource location.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Location1
-Resource location.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Name
-Resource Name.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -183,22 +133,6 @@ Total number of storage accounts.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -230,7 +164,7 @@ Storage quota.
 To construct, see NOTES section for QUOTAOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IStorageQuota
+Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 Parameter Sets: Create, CreateViaIdentity
 Aliases:
 
@@ -253,38 +187,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Tag
-Resource tags.
-
-```yaml
-Type: System.Collections.Hashtable
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Type
-Resource type.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -328,13 +230,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IStorageQuota
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 
 ### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IStorageQuota
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 
 ## ALIASES
 
@@ -345,23 +247,12 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 #### QUOTAOBJECT <IStorageQuota>: Storage quota.
-  - `[Id <String>]`: Resource ID.
-  - `[Location <String>]`: Resource location.
-  - `[Name <String>]`: Resource Name.
-  - `[Tag <IResourceTags>]`: Resource tags.
-    - `[(Any) <String>]`: This indicates any property can be added to this object.
-  - `[Type <String>]`: Resource type.
   - `[CapacityInGb <Int32?>]`: Maximum capacity (GB).
   - `[NumberOfStorageAccount <Int32?>]`: Total number of storage accounts.
 

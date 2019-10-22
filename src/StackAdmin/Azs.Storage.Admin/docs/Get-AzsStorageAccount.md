@@ -12,22 +12,21 @@ Returns the requested storage account.
 
 ## SYNTAX
 
-### Get (Default)
+### List (Default)
 ```
-Get-AzsStorageAccount -AccountId <String> -FarmName <String> -ResourceGroupName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
+Get-AzsStorageAccount [-Location <String>] [-SubscriptionId <String[]>] [-Filter <String>] [-Summary]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### Get
+```
+Get-AzsStorageAccount -AccountId <String> [-Location <String>] [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzsStorageAccount -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [<CommonParameters>]
-```
-
-### List
-```
-Get-AzsStorageAccount -FarmName <String> -ResourceGroupName <String> -Summary [-SubscriptionId <String[]>]
- [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
+Get-AzsStorageAccount -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,15 +86,15 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmName
-Farm Id.
+### -Filter
+Filter string
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List
+Parameter Sets: List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -120,33 +119,17 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -ResourceGroupName
-Resource group name.
+### -Location
+Resource location.
 
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -176,7 +159,7 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -193,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IStorageAccount
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageAccount
 
 ## ALIASES
 
@@ -204,14 +187,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS

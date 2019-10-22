@@ -1,4 +1,4 @@
-$TestRecordingFile = Join-Path $PSScriptRoot 'Get-AzsFarm.Recording.json'
+$TestRecordingFile = Join-Path $PSScriptRoot 'Get-AzsStorageSetting.Recording.json'
 $currentPath = $PSScriptRoot
 while(-not $mockingPath) {
     $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -6,11 +6,7 @@ while(-not $mockingPath) {
 }
 . ($mockingPath | Select-Object -First 1).FullName
 
-Describe 'Get-AzsFarm' {
-    It 'List' {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
-    }
-
+Describe 'Get-AzsStorageSetting' {
     It 'Get' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }

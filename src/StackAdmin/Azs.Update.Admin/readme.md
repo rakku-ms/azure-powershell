@@ -49,7 +49,6 @@ In this directory, run AutoRest:
 require:
   - $(this-folder)/../readme.azurestack.md
   - $(repo)/specification/azsadmin/resource-manager/update/readme.azsautogen.md
-  - $(repo)/specification/azsadmin/resource-manager/update/readme.md
 
 subject-prefix: ''
 module-version: 0.0.1
@@ -59,3 +58,4 @@ module-name: Azs.Update.Admin
 csproj: Azs.Update.Admin.csproj 
 psd1: Azs.Update.Admin.psd1 
 psm1: Azs.Update.Admin.psm1
+```

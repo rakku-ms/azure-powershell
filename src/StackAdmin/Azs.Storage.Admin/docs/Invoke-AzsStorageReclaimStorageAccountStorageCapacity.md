@@ -1,31 +1,31 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/get-azsstoragequeueservice
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/invoke-azsstoragereclaimstorageaccountstoragecapacity
 schema: 2.0.0
 ---
 
-# Get-AzsStorageQueueService
+# Invoke-AzsStorageReclaimStorageAccountStorageCapacity
 
 ## SYNOPSIS
-Returns the queue service.
+Start reclaim storage capacity on deleted storage objects.
 
 ## SYNTAX
 
-### Get (Default)
+### Reclaim (Default)
 ```
-Get-AzsStorageQueueService -FarmName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
- [-DefaultProfile <PSObject>] [-PassThru] [<CommonParameters>]
+Invoke-AzsStorageReclaimStorageAccountStorageCapacity [-Location <String>] [-SubscriptionId <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### GetViaIdentity
+### ReclaimViaIdentity
 ```
-Get-AzsStorageQueueService -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [<CommonParameters>]
+Invoke-AzsStorageReclaimStorageAccountStorageCapacity -InputObject <IStorageAdminIdentity>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns the queue service.
+Start reclaim storage capacity on deleted storage objects.
 
 ## EXAMPLES
 
@@ -49,6 +49,22 @@ PS C:\> {{ Add code here }}
 
 ## PARAMETERS
 
+### -AsJob
+Run the command as a job
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -65,35 +81,51 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmName
-Farm Id.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
-Parameter Sets: GetViaIdentity
+Parameter Sets: ReclaimViaIdentity
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -Location
+Resource location.
+
+```yaml
+Type: System.String
+Parameter Sets: Reclaim
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzLocation)[0].Name
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -NoWait
+Run the command asynchronously
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
 ```
@@ -114,15 +146,31 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -ResourceGroupName
-Resource group name.
+### -SubscriptionId
+Subscription Id.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Reclaim
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -130,17 +178,18 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -SubscriptionId
-Subscription Id.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: System.String[]
-Parameter Sets: Get
-Aliases:
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
-Default value: (Get-AzContext).Subscription.Id
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -155,7 +204,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api20151201Preview.IQueueService
+### System.Boolean
 
 ## ALIASES
 
@@ -166,14 +215,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS

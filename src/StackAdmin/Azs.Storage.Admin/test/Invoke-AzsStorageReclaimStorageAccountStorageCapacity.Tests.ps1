@@ -1,4 +1,4 @@
-$TestRecordingFile = Join-Path $PSScriptRoot 'Get-AzsStorageBlobServiceMetricDefinition.Recording.json'
+$TestRecordingFile = Join-Path $PSScriptRoot 'Invoke-AzsStorageReclaimStorageAccountStorageCapacity.Recording.json'
 $currentPath = $PSScriptRoot
 while(-not $mockingPath) {
     $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -6,8 +6,12 @@ while(-not $mockingPath) {
 }
 . ($mockingPath | Select-Object -First 1).FullName
 
-Describe 'Get-AzsStorageBlobServiceMetricDefinition' {
-    It 'List' {
+Describe 'Invoke-AzsStorageReclaimStorageAccountStorageCapacity' {
+    It 'Reclaim' {
+        { throw [System.NotImplementedException] } | Should -Not -Throw
+    }
+
+    It 'ReclaimViaIdentity' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 }

@@ -7,11 +7,11 @@ while(-not $mockingPath) {
 . ($mockingPath | Select-Object -First 1).FullName
 
 Describe 'Get-AzsStorageAccount' {
-    It 'Get' {
+    It 'List' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'List' {
+    It 'Get' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 

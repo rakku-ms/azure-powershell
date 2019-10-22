@@ -8,24 +8,25 @@ schema: 2.0.0
 # Restore-AzsStorageAccount
 
 ## SYNOPSIS
-Undelete a deleted storage account.
+Undelete a deleted storage account with new account name if the a new name is provided.
 
 ## SYNTAX
 
 ### Undelete (Default)
 ```
-Restore-AzsStorageAccount -AccountId <String> -FarmName <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Restore-AzsStorageAccount -AccountId <String> [-Location <String>] [-SubscriptionId <String>]
+ [-NewAccountName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UndeleteViaIdentity
 ```
-Restore-AzsStorageAccount -InputObject <IStorageAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+Restore-AzsStorageAccount -InputObject <IStorageAdminIdentity> [-NewAccountName <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Undelete a deleted storage account.
+Undelete a deleted storage account with new account name if the a new name is provided.
 
 ## EXAMPLES
 
@@ -65,13 +66,13 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+### -AsJob
+Run the command as a job
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+Aliases:
 
 Required: False
 Position: Named
@@ -81,15 +82,15 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -FarmName
-Farm Id.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.String
-Parameter Sets: Undelete
-Aliases:
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -114,11 +115,27 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -PassThru
-Returns true when the command succeeds
+### -Location
+Resource location.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
+Parameter Sets: Undelete
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzLocation)[0].Name
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -NewAccountName
+New storage account name when doing undelete storage account operation.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -130,15 +147,15 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -ResourceGroupName
-Resource group name.
+### -NoWait
+Run the command asynchronously
 
 ```yaml
-Type: System.String
-Parameter Sets: Undelete
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -204,7 +221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IUndeleteStorageAccount
 
 ## ALIASES
 
@@ -215,14 +232,9 @@ To create the parameters described below, construct a hash table containing the 
 
 #### INPUTOBJECT <IStorageAdminIdentity>: Identity Parameter
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
-  - `[FarmId <String>]`: Farm Id.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Resource location.
-  - `[OperationId <String>]`: Operation Id.
   - `[QuotaName <String>]`: The name of the storage quota.
-  - `[ResourceGroupName <String>]`: Resource group name.
-  - `[ServiceType <ServiceType?>]`: The service type.
-  - `[ShareName <String>]`: Share name.
   - `[SubscriptionId <String>]`: Subscription Id.
 
 ## RELATED LINKS
