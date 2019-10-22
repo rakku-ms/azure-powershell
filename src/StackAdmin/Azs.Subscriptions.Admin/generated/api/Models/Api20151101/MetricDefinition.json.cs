@@ -71,7 +71,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
                 return;
             }
             {_name = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("name"), out var __jsonName) ? (string)__jsonName : (string)Name;}
-            {_metricAvailability = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("metricAvailabilities"), out var __jsonMetricAvailabilities) ? If( __jsonMetricAvailabilities as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability) (Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.MetricAvailability.FromJson(__u) )) ))() : null : MetricAvailability;}
+            {_metricAvailabilities = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("metricAvailabilities"), out var __jsonMetricAvailabilities) ? If( __jsonMetricAvailabilities as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability) (Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.MetricAvailability.FromJson(__u) )) ))() : null : MetricAvailabilities;}
             {_primaryAggregationType = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("primaryAggregationType"), out var __jsonPrimaryAggregationType) ? (string)__jsonPrimaryAggregationType : (string)PrimaryAggregationType;}
             {_unit = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("unit"), out var __jsonUnit) ? (string)__jsonUnit : (string)Unit;}
             AfterFromJson(json);
@@ -97,10 +97,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
                 return container;
             }
             AddIf( null != (((object)this._name)?.ToString()) ? (Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonNode) new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString(this._name.ToString()) : null, "name" ,container.Add );
-            if (null != this._metricAvailability)
+            if (null != this._metricAvailabilities)
             {
                 var __w = new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.XNodeArray();
-                foreach( var __x in this._metricAvailability )
+                foreach( var __x in this._metricAvailabilities )
                 {
                     AddIf(__x?.ToJson(null, serializationMode) ,__w.Add);
                 }

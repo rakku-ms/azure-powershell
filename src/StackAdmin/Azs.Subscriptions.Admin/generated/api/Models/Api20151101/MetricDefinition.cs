@@ -8,12 +8,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricDefinitionInternal
     {
 
-        /// <summary>Backing field for <see cref="MetricAvailability" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] _metricAvailability;
+        /// <summary>Backing field for <see cref="MetricAvailabilities" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] _metricAvailabilities;
 
         /// <summary>Metric availabilities.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailability { get => this._metricAvailability; set => this._metricAvailability = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailabilities { get => this._metricAvailabilities; set => this._metricAvailabilities = value; }
 
         /// <summary>Backing field for <see cref="Name" /> property.</summary>
         private string _name;
@@ -53,7 +53,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"Metric availabilities.",
         SerializedName = @"metricAvailabilities",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability) })]
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailability { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailabilities { get; set; }
         /// <summary>Metric definition name.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -85,7 +85,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>Metric availabilities.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailability { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricAvailability[] MetricAvailabilities { get; set; }
         /// <summary>Metric definition name.</summary>
         string Name { get; set; }
         /// <summary>Type of the primary aggregation.</summary>

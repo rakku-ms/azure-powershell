@@ -8,57 +8,57 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal
     {
 
-        /// <summary>Backing field for <see cref="AllowedUnauthorizedAction" /> property.</summary>
-        private string[] _allowedUnauthorizedAction;
+        /// <summary>Backing field for <see cref="AllowedUnauthorizedActions" /> property.</summary>
+        private string[] _allowedUnauthorizedActions;
 
         /// <summary>The allowed unauthorized actions.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] AllowedUnauthorizedAction { get => this._allowedUnauthorizedAction; set => this._allowedUnauthorizedAction = value; }
-
-        /// <summary>Backing field for <see cref="ApiProfile" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList _apiProfile;
-
-        /// <summary>The API profiles.</summary>
-        [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList ApiProfile { get => (this._apiProfile = this._apiProfile ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ApiProfileList()); set => this._apiProfile = value; }
+        public string[] AllowedUnauthorizedActions { get => this._allowedUnauthorizedActions; set => this._allowedUnauthorizedActions = value; }
 
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string ApiProfileNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfile).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfile).NextLink = value; }
+        public string ApiProfileNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfiles).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfiles).NextLink = value; }
 
         /// <summary>List of the API profiles.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfile[] ApiProfileValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfile).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfile).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfile[] ApiProfileValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfiles).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileListInternal)ApiProfiles).Value = value; }
 
-        /// <summary>Backing field for <see cref="AuthorizationActionMapping" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList _authorizationActionMapping;
+        /// <summary>Backing field for <see cref="ApiProfiles" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList _apiProfiles;
 
-        /// <summary>The read-only actions.</summary>
+        /// <summary>The API profiles.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList AuthorizationActionMapping { get => (this._authorizationActionMapping = this._authorizationActionMapping ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.AuthorizationActionMappingList()); set => this._authorizationActionMapping = value; }
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList ApiProfiles { get => (this._apiProfiles = this._apiProfiles ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ApiProfileList()); set => this._apiProfiles = value; }
 
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string AuthorizationActionMappingNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMapping).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMapping).NextLink = value; }
+        public string AuthorizationActionMappingNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMappings).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMappings).NextLink = value; }
 
         /// <summary>List of the read-only actions.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMapping[] AuthorizationActionMappingValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMapping).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMapping).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMapping[] AuthorizationActionMappingValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMappings).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingListInternal)AuthorizationActionMappings).Value = value; }
 
-        /// <summary>Backing field for <see cref="Endpoint" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList _endpoint;
+        /// <summary>Backing field for <see cref="AuthorizationActionMappings" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList _authorizationActionMappings;
 
-        /// <summary>The resource provider endpoints.</summary>
+        /// <summary>The read-only actions.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Endpoint { get => (this._endpoint = this._endpoint ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ResourceProviderEndpointList()); set => this._endpoint = value; }
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList AuthorizationActionMappings { get => (this._authorizationActionMappings = this._authorizationActionMappings ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.AuthorizationActionMappingList()); set => this._authorizationActionMappings = value; }
 
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string EndpointNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoint).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoint).NextLink = value; }
+        public string EndpointNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoints).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoints).NextLink = value; }
 
         /// <summary>List of the resource provider endpoints.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpoint[] EndpointValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoint).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoint).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpoint[] EndpointValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoints).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointListInternal)Endpoints).Value = value; }
+
+        /// <summary>Backing field for <see cref="Endpoints" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList _endpoints;
+
+        /// <summary>The resource provider endpoints.</summary>
+        [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Endpoints { get => (this._endpoints = this._endpoints ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ResourceProviderEndpointList()); set => this._endpoints = value; }
 
         /// <summary>Backing field for <see cref="InGlobalLocation" /> property.</summary>
         private bool? _inGlobalLocation;
@@ -67,50 +67,50 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
         public bool? InGlobalLocation { get => this._inGlobalLocation; set => this._inGlobalLocation = value; }
 
-        /// <summary>Backing field for <see cref="LinkedAccessCheck" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList _linkedAccessCheck;
-
-        /// <summary>The linked access checks.</summary>
-        [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList LinkedAccessCheck { get => (this._linkedAccessCheck = this._linkedAccessCheck ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedAccessCheckList()); set => this._linkedAccessCheck = value; }
-
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string LinkedAccessCheckNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessCheck).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessCheck).NextLink = value; }
+        public string LinkedAccessCheckNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessChecks).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessChecks).NextLink = value; }
 
         /// <summary>List of the linked access checks.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheck[] LinkedAccessCheckValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessCheck).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessCheck).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheck[] LinkedAccessCheckValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessChecks).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckListInternal)LinkedAccessChecks).Value = value; }
 
-        /// <summary>Backing field for <see cref="LinkedNotificationRule" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList _linkedNotificationRule;
+        /// <summary>Backing field for <see cref="LinkedAccessChecks" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList _linkedAccessChecks;
 
-        /// <summary>The linked notification rules.</summary>
+        /// <summary>The linked access checks.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList LinkedNotificationRule { get => (this._linkedNotificationRule = this._linkedNotificationRule ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedNotificationRuleList()); set => this._linkedNotificationRule = value; }
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList LinkedAccessChecks { get => (this._linkedAccessChecks = this._linkedAccessChecks ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedAccessCheckList()); set => this._linkedAccessChecks = value; }
 
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string LinkedNotificationRuleNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRule).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRule).NextLink = value; }
+        public string LinkedNotificationRuleNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRules).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRules).NextLink = value; }
 
         /// <summary>List of the linked notification rules.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRule[] LinkedNotificationRuleValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRule).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRule).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRule[] LinkedNotificationRuleValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRules).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleListInternal)LinkedNotificationRules).Value = value; }
 
-        /// <summary>Backing field for <see cref="LinkedOperationRule" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList _linkedOperationRule;
+        /// <summary>Backing field for <see cref="LinkedNotificationRules" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList _linkedNotificationRules;
 
-        /// <summary>The linked operation rules.</summary>
+        /// <summary>The linked notification rules.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList LinkedOperationRule { get => (this._linkedOperationRule = this._linkedOperationRule ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedOperationRuleList()); set => this._linkedOperationRule = value; }
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList LinkedNotificationRules { get => (this._linkedNotificationRules = this._linkedNotificationRules ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedNotificationRuleList()); set => this._linkedNotificationRules = value; }
 
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string LinkedOperationRuleNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRule).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRule).NextLink = value; }
+        public string LinkedOperationRuleNextLink { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRules).NextLink; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRules).NextLink = value; }
 
         /// <summary>List of the linked operation rules.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRule[] LinkedOperationRuleValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRule).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRule).Value = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRule[] LinkedOperationRuleValue { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRules).Value; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleListInternal)LinkedOperationRules).Value = value; }
+
+        /// <summary>Backing field for <see cref="LinkedOperationRules" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList _linkedOperationRules;
+
+        /// <summary>The linked operation rules.</summary>
+        [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList LinkedOperationRules { get => (this._linkedOperationRules = this._linkedOperationRules ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedOperationRuleList()); set => this._linkedOperationRules = value; }
 
         /// <summary>Backing field for <see cref="MarketplaceType" /> property.</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Support.MarketplaceType? _marketplaceType;
@@ -119,30 +119,30 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
         public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Support.MarketplaceType? MarketplaceType { get => this._marketplaceType; set => this._marketplaceType = value; }
 
-        /// <summary>Backing field for <see cref="MeteredResourceId" /> property.</summary>
-        private string[] _meteredResourceId;
+        /// <summary>Backing field for <see cref="MeteredResourceIds" /> property.</summary>
+        private string[] _meteredResourceIds;
 
         /// <summary>The metered resource ids.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] MeteredResourceId { get => this._meteredResourceId; set => this._meteredResourceId = value; }
+        public string[] MeteredResourceIds { get => this._meteredResourceIds; set => this._meteredResourceIds = value; }
 
-        /// <summary>Internal Acessors for ApiProfile</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.ApiProfile { get => (this._apiProfile = this._apiProfile ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ApiProfileList()); set { {_apiProfile = value;} } }
+        /// <summary>Internal Acessors for ApiProfiles</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.ApiProfiles { get => (this._apiProfiles = this._apiProfiles ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ApiProfileList()); set { {_apiProfiles = value;} } }
 
-        /// <summary>Internal Acessors for AuthorizationActionMapping</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.AuthorizationActionMapping { get => (this._authorizationActionMapping = this._authorizationActionMapping ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.AuthorizationActionMappingList()); set { {_authorizationActionMapping = value;} } }
+        /// <summary>Internal Acessors for AuthorizationActionMappings</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.AuthorizationActionMappings { get => (this._authorizationActionMappings = this._authorizationActionMappings ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.AuthorizationActionMappingList()); set { {_authorizationActionMappings = value;} } }
 
-        /// <summary>Internal Acessors for Endpoint</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.Endpoint { get => (this._endpoint = this._endpoint ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ResourceProviderEndpointList()); set { {_endpoint = value;} } }
+        /// <summary>Internal Acessors for Endpoints</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.Endpoints { get => (this._endpoints = this._endpoints ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ResourceProviderEndpointList()); set { {_endpoints = value;} } }
 
-        /// <summary>Internal Acessors for LinkedAccessCheck</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedAccessCheck { get => (this._linkedAccessCheck = this._linkedAccessCheck ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedAccessCheckList()); set { {_linkedAccessCheck = value;} } }
+        /// <summary>Internal Acessors for LinkedAccessChecks</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedAccessChecks { get => (this._linkedAccessChecks = this._linkedAccessChecks ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedAccessCheckList()); set { {_linkedAccessChecks = value;} } }
 
-        /// <summary>Internal Acessors for LinkedNotificationRule</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedNotificationRule { get => (this._linkedNotificationRule = this._linkedNotificationRule ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedNotificationRuleList()); set { {_linkedNotificationRule = value;} } }
+        /// <summary>Internal Acessors for LinkedNotificationRules</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedNotificationRules { get => (this._linkedNotificationRules = this._linkedNotificationRules ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedNotificationRuleList()); set { {_linkedNotificationRules = value;} } }
 
-        /// <summary>Internal Acessors for LinkedOperationRule</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedOperationRule { get => (this._linkedOperationRule = this._linkedOperationRule ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedOperationRuleList()); set { {_linkedOperationRule = value;} } }
+        /// <summary>Internal Acessors for LinkedOperationRules</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceTypeInternal.LinkedOperationRules { get => (this._linkedOperationRules = this._linkedOperationRules ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.LinkedOperationRuleList()); set { {_linkedOperationRules = value;} } }
 
         /// <summary>Backing field for <see cref="Name" /> property.</summary>
         private string _name;
@@ -182,7 +182,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"The allowed unauthorized actions.",
         SerializedName = @"allowedUnauthorizedActions",
         PossibleTypes = new [] { typeof(string) })]
-        string[] AllowedUnauthorizedAction { get; set; }
+        string[] AllowedUnauthorizedActions { get; set; }
         /// <summary>URI to next page.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -302,7 +302,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"The metered resource ids.",
         SerializedName = @"meteredResourceIds",
         PossibleTypes = new [] { typeof(string) })]
-        string[] MeteredResourceId { get; set; }
+        string[] MeteredResourceIds { get; set; }
         /// <summary>The name.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -334,49 +334,49 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>The allowed unauthorized actions.</summary>
-        string[] AllowedUnauthorizedAction { get; set; }
-        /// <summary>The API profiles.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList ApiProfile { get; set; }
+        string[] AllowedUnauthorizedActions { get; set; }
         /// <summary>URI to next page.</summary>
         string ApiProfileNextLink { get; set; }
         /// <summary>List of the API profiles.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfile[] ApiProfileValue { get; set; }
-        /// <summary>The read-only actions.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList AuthorizationActionMapping { get; set; }
+        /// <summary>The API profiles.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IApiProfileList ApiProfiles { get; set; }
         /// <summary>URI to next page.</summary>
         string AuthorizationActionMappingNextLink { get; set; }
         /// <summary>List of the read-only actions.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMapping[] AuthorizationActionMappingValue { get; set; }
-        /// <summary>The resource provider endpoints.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Endpoint { get; set; }
+        /// <summary>The read-only actions.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAuthorizationActionMappingList AuthorizationActionMappings { get; set; }
         /// <summary>URI to next page.</summary>
         string EndpointNextLink { get; set; }
         /// <summary>List of the resource provider endpoints.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpoint[] EndpointValue { get; set; }
+        /// <summary>The resource provider endpoints.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointList Endpoints { get; set; }
         /// <summary>A value indicating whether the resource type is in global location.</summary>
         bool? InGlobalLocation { get; set; }
-        /// <summary>The linked access checks.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList LinkedAccessCheck { get; set; }
         /// <summary>URI to next page.</summary>
         string LinkedAccessCheckNextLink { get; set; }
         /// <summary>List of the linked access checks.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheck[] LinkedAccessCheckValue { get; set; }
-        /// <summary>The linked notification rules.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList LinkedNotificationRule { get; set; }
+        /// <summary>The linked access checks.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedAccessCheckList LinkedAccessChecks { get; set; }
         /// <summary>URI to next page.</summary>
         string LinkedNotificationRuleNextLink { get; set; }
         /// <summary>List of the linked notification rules.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRule[] LinkedNotificationRuleValue { get; set; }
-        /// <summary>The linked operation rules.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList LinkedOperationRule { get; set; }
+        /// <summary>The linked notification rules.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleList LinkedNotificationRules { get; set; }
         /// <summary>URI to next page.</summary>
         string LinkedOperationRuleNextLink { get; set; }
         /// <summary>List of the linked operation rules.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRule[] LinkedOperationRuleValue { get; set; }
+        /// <summary>The linked operation rules.</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleList LinkedOperationRules { get; set; }
         /// <summary>The resource type behavior in the marketplace.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Support.MarketplaceType? MarketplaceType { get; set; }
         /// <summary>The metered resource ids.</summary>
-        string[] MeteredResourceId { get; set; }
+        string[] MeteredResourceIds { get; set; }
         /// <summary>The name.</summary>
         string Name { get; set; }
         /// <summary>The resource deletion policy.</summary>

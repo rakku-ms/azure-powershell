@@ -70,7 +70,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
             {
                 return;
             }
-            {_dependsOnType = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("dependsOnTypes"), out var __jsonDependsOnTypes) ? If( __jsonDependsOnTypes as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<string[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(string) (__u is Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString __t ? (string)(__t.ToString()) : null)) ))() : null : DependsOnType;}
+            {_dependsOnTypes = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("dependsOnTypes"), out var __jsonDependsOnTypes) ? If( __jsonDependsOnTypes as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<string[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(string) (__u is Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString __t ? (string)(__t.ToString()) : null)) ))() : null : DependsOnTypes;}
             {_linkedAction = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("linkedAction"), out var __jsonLinkedAction) ? (string)__jsonLinkedAction : (string)LinkedAction;}
             {_linkedOperation = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("linkedOperation"), out var __jsonLinkedOperation) ? (string)__jsonLinkedOperation : (string)LinkedOperation;}
             AfterFromJson(json);
@@ -95,10 +95,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
             {
                 return container;
             }
-            if (null != this._dependsOnType)
+            if (null != this._dependsOnTypes)
             {
                 var __w = new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.XNodeArray();
-                foreach( var __x in this._dependsOnType )
+                foreach( var __x in this._dependsOnTypes )
                 {
                     AddIf(null != (((object)__x)?.ToString()) ? (Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonNode) new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString(__x.ToString()) : null ,__w.Add);
                 }

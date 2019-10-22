@@ -19,7 +19,8 @@ Get-AzsManifest [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<Comm
 
 ### Get
 ```
-Get-AzsManifest -Name <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsManifest -ManifestName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -85,13 +86,13 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Name
+### -ManifestName
 The manifest name.
 
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: ManifestName
+Aliases:
 
 Required: True
 Position: Named

@@ -70,7 +70,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
             {
                 return;
             }
-            {_resource = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("resources"), out var __jsonResources) ? If( __jsonResources as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<string[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(string) (__u is Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString __t ? (string)(__t.ToString()) : null)) ))() : null : Resource;}
+            {_resources = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray>("resources"), out var __jsonResources) ? If( __jsonResources as Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonArray, out var __v) ? new global::System.Func<string[]>(()=> global::System.Linq.Enumerable.ToArray(global::System.Linq.Enumerable.Select(__v, (__u)=>(string) (__u is Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString __t ? (string)(__t.ToString()) : null)) ))() : null : Resources;}
             {_targetDelegatedProviderOffer = If( json?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString>("targetDelegatedProviderOffer"), out var __jsonTargetDelegatedProviderOffer) ? (string)__jsonTargetDelegatedProviderOffer : (string)TargetDelegatedProviderOffer;}
             AfterFromJson(json);
         }
@@ -94,10 +94,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
             {
                 return container;
             }
-            if (null != this._resource)
+            if (null != this._resources)
             {
                 var __w = new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.XNodeArray();
-                foreach( var __x in this._resource )
+                foreach( var __x in this._resources )
                 {
                     AddIf(null != (((object)__x)?.ToString()) ? (Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonNode) new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Json.JsonString(__x.ToString()) : null ,__w.Add);
                 }

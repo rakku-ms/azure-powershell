@@ -15,7 +15,7 @@ Create or update the offer.
 ### UpdateExpanded (Default)
 ```
 Set-AzsOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-AddonPlan <IAddonPlanDefinition[]>] [-BasePlanId <String[]>] [-Description <String>]
+ [-AddonPlans <IAddonPlanDefinition[]>] [-BasePlanIds <String[]>] [-Description <String>]
  [-DisplayName <String>] [-ExternalReferenceId <String>] [-Location <String>]
  [-MaxSubscriptionsPerAccount <Int32>] [-PropertiesName <String>] [-State <AccessibilityState>]
  [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -52,9 +52,9 @@ PS C:\> {{ Add code here }}
 
 ## PARAMETERS
 
-### -AddonPlan
+### -AddonPlans
 References to add-on plans that a tenant can optionally acquire as a part of the offer.
-To construct, see NOTES section for ADDONPLAN properties and create a hash table.
+To construct, see NOTES section for ADDONPLANS properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[]
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -BasePlanId
+### -BasePlanIds
 Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
 
 ```yaml
@@ -159,7 +159,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -345,16 +345,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### ADDONPLAN <IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
+#### ADDONPLANS <IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
   - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
   - `[PlanId <String>]`: Plan identifier.
 
 #### NEWOFFER <IOffer>: Represents an offering of services against which a subscription can be created.
   - `[Location <String>]`: Location of the resource
-  - `[AddonPlan <IAddonPlanDefinition[]>]`: References to add-on plans that a tenant can optionally acquire as a part of the offer.
+  - `[AddonPlans <IAddonPlanDefinition[]>]`: References to add-on plans that a tenant can optionally acquire as a part of the offer.
     - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
     - `[PlanId <String>]`: Plan identifier.
-  - `[BasePlanId <String[]>]`: Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
+  - `[BasePlanIds <String[]>]`: Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
   - `[Description <String>]`: Description of offer.
   - `[DisplayName <String>]`: Display name of offer.
   - `[ExternalReferenceId <String>]`: External reference identifier.

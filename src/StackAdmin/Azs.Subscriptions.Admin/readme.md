@@ -49,10 +49,10 @@ In this directory, run AutoRest:
 require:
   - $(this-folder)/../readme.azurestack.md
   - $(repo)/specification/azsadmin/resource-manager/subscriptions/readme.azsautogen.md
-  - $(repo)/specification/azsadmin/resource-manager/subscriptions/readme.md
 
 subject-prefix: ''
 module-version: 0.0.1
+sanitize-names: false
 
 ### File Renames 
 module-name: Azs.Subscriptions.Admin 

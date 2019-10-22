@@ -8,8 +8,8 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionDefinitionInternal
     {
 
-        /// <summary>Internal Acessors for Property</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionDefinitionInternal.Property { get => (this._property = this._property ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ExtensionPropertiesDefinition()); set { {_property = value;} } }
+        /// <summary>Internal Acessors for Properties</summary>
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionDefinitionInternal.Properties { get => (this._properties = this._properties ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ExtensionPropertiesDefinition()); set { {_properties = value;} } }
 
         /// <summary>Internal Acessors for ResourceAccess</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceAccessList Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionDefinitionInternal.ResourceAccess { get => (this._resourceAccess = this._resourceAccess ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ResourceAccessList()); set { {_resourceAccess = value;} } }
@@ -28,16 +28,16 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
         public int? ObsoleteBundlesBitmask { get => this._obsoleteBundlesBitmask; set => this._obsoleteBundlesBitmask = value; }
 
-        /// <summary>Backing field for <see cref="Property" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition _property;
+        /// <summary>Backing field for <see cref="Properties" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition _properties;
 
         /// <summary>The extension properties.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Property { get => (this._property = this._property ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ExtensionPropertiesDefinition()); set => this._property = value; }
+        internal Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Properties { get => (this._properties = this._properties ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ExtensionPropertiesDefinition()); set => this._properties = value; }
 
         /// <summary>The quota create blade.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string QuotaCreateBladeName { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Property).QuotaCreateBladeName; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Property).QuotaCreateBladeName = value; }
+        public string QuotaCreateBladeName { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Properties).QuotaCreateBladeName; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Properties).QuotaCreateBladeName = value; }
 
         /// <summary>Backing field for <see cref="ResourceAccess" /> property.</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceAccessList _resourceAccess;
@@ -56,7 +56,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
         /// <summary>The resource provider dashboard blade.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Inlined)]
-        public string ResourceProviderDashboardBladeName { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Property).ResourceProviderDashboardBladeName; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Property).ResourceProviderDashboardBladeName = value; }
+        public string ResourceProviderDashboardBladeName { get => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Properties).ResourceProviderDashboardBladeName; set => ((Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinitionInternal)Properties).ResourceProviderDashboardBladeName = value; }
 
         /// <summary>Backing field for <see cref="Uri" /> property.</summary>
         private string _uri;
@@ -142,7 +142,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         /// <summary>The obsolete bundles bitmask.</summary>
         int? ObsoleteBundlesBitmask { get; set; }
         /// <summary>The extension properties.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Property { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IExtensionPropertiesDefinition Properties { get; set; }
         /// <summary>The quota create blade.</summary>
         string QuotaCreateBladeName { get; set; }
         /// <summary>The resource access.</summary>

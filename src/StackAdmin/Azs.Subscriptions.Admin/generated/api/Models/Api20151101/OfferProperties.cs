@@ -8,23 +8,23 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOfferPropertiesInternal
     {
 
-        /// <summary>Backing field for <see cref="AddonPlan" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] _addonPlan;
+        /// <summary>Backing field for <see cref="AddonPlans" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] _addonPlans;
 
         /// <summary>
         /// References to add-on plans that a tenant can optionally acquire as a part of the offer.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlan { get => this._addonPlan; set => this._addonPlan = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlans { get => this._addonPlans; set => this._addonPlans = value; }
 
-        /// <summary>Backing field for <see cref="BasePlanId" /> property.</summary>
-        private string[] _basePlanId;
+        /// <summary>Backing field for <see cref="BasePlanIds" /> property.</summary>
+        private string[] _basePlanIds;
 
         /// <summary>
         /// Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] BasePlanId { get => this._basePlanId; set => this._basePlanId = value; }
+        public string[] BasePlanIds { get => this._basePlanIds; set => this._basePlanIds = value; }
 
         /// <summary>Backing field for <see cref="Description" /> property.</summary>
         private string _description;
@@ -94,7 +94,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"References to add-on plans that a tenant can optionally acquire as a part of the offer.",
         SerializedName = @"addonPlans",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition) })]
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlan { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlans { get; set; }
         /// <summary>
         /// Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
         /// </summary>
@@ -104,7 +104,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.",
         SerializedName = @"basePlanIds",
         PossibleTypes = new [] { typeof(string) })]
-        string[] BasePlanId { get; set; }
+        string[] BasePlanIds { get; set; }
         /// <summary>Description of offer.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -170,11 +170,11 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         /// <summary>
         /// References to add-on plans that a tenant can optionally acquire as a part of the offer.
         /// </summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlan { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[] AddonPlans { get; set; }
         /// <summary>
         /// Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
         /// </summary>
-        string[] BasePlanId { get; set; }
+        string[] BasePlanIds { get; set; }
         /// <summary>Description of offer.</summary>
         string Description { get; set; }
         /// <summary>Display name of offer.</summary>

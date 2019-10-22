@@ -8,12 +8,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedOperationRuleInternal
     {
 
-        /// <summary>Backing field for <see cref="DependsOnType" /> property.</summary>
-        private string[] _dependsOnType;
+        /// <summary>Backing field for <see cref="DependsOnTypes" /> property.</summary>
+        private string[] _dependsOnTypes;
 
         /// <summary>The list of resource types this rule depends on.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] DependsOnType { get => this._dependsOnType; set => this._dependsOnType = value; }
+        public string[] DependsOnTypes { get => this._dependsOnTypes; set => this._dependsOnTypes = value; }
 
         /// <summary>Backing field for <see cref="LinkedAction" /> property.</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Support.ResourceDeletionPolicy? _linkedAction;
@@ -46,7 +46,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"The list of resource types this rule depends on.",
         SerializedName = @"dependsOnTypes",
         PossibleTypes = new [] { typeof(string) })]
-        string[] DependsOnType { get; set; }
+        string[] DependsOnTypes { get; set; }
         /// <summary>The linked action.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -70,7 +70,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>The list of resource types this rule depends on.</summary>
-        string[] DependsOnType { get; set; }
+        string[] DependsOnTypes { get; set; }
         /// <summary>The linked action.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Support.ResourceDeletionPolicy? LinkedAction { get; set; }
         /// <summary>The linked operation.</summary>

@@ -16,7 +16,7 @@ Create or update the plan.
 ```
 New-AzsPlan -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-Description <String>]
  [-DisplayName <String>] [-ExternalReferenceId <String>] [-Location <String>] [-PropertiesName <String>]
- [-QuotaId <String[]>] [-SkuId <String[]>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>]
+ [-QuotaIds <String[]>] [-SkuIds <String[]>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,8 +35,8 @@ New-AzsPlan -InputObject <ISubscriptionsAdminIdentity> -NewPlan <IPlan> [-Defaul
 ### CreateViaIdentityExpanded
 ```
 New-AzsPlan -InputObject <ISubscriptionsAdminIdentity> [-Description <String>] [-DisplayName <String>]
- [-ExternalReferenceId <String>] [-Location <String>] [-PropertiesName <String>] [-QuotaId <String[]>]
- [-SkuId <String[]>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [-ExternalReferenceId <String>] [-Location <String>] [-PropertiesName <String>] [-QuotaIds <String[]>]
+ [-SkuIds <String[]>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -156,7 +156,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -QuotaId
+### -QuotaIds
 Quota identifiers under the plan.
 
 ```yaml
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -SkuId
+### -SkuIds
 SKU identifiers.
 
 ```yaml
@@ -369,8 +369,8 @@ To create the parameters described below, construct a hash table containing the 
   - `[DisplayName <String>]`: Display name.
   - `[ExternalReferenceId <String>]`: External reference identifier.
   - `[PropertiesName <String>]`: Name of the plan.
-  - `[QuotaId <String[]>]`: Quota identifiers under the plan.
-  - `[SkuId <String[]>]`: SKU identifiers.
+  - `[QuotaIds <String[]>]`: Quota identifiers under the plan.
+  - `[SkuIds <String[]>]`: SKU identifiers.
   - `[SubscriptionCount <Int32?>]`: Subscription count.
 
 ## RELATED LINKS

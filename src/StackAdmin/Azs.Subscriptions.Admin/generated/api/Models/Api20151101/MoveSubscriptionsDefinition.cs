@@ -8,12 +8,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMoveSubscriptionsDefinitionInternal
     {
 
-        /// <summary>Backing field for <see cref="Resource" /> property.</summary>
-        private string[] _resource;
+        /// <summary>Backing field for <see cref="Resources" /> property.</summary>
+        private string[] _resources;
 
         /// <summary>A collection of subscriptions to move to the target delegated provider offer.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] Resource { get => this._resource; set => this._resource = value; }
+        public string[] Resources { get => this._resources; set => this._resources = value; }
 
         /// <summary>Backing field for <see cref="TargetDelegatedProviderOffer" /> property.</summary>
         private string _targetDelegatedProviderOffer;
@@ -41,7 +41,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"A collection of subscriptions to move to the target delegated provider offer.",
         SerializedName = @"resources",
         PossibleTypes = new [] { typeof(string) })]
-        string[] Resource { get; set; }
+        string[] Resources { get; set; }
         /// <summary>
         /// The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>A collection of subscriptions to move to the target delegated provider offer.</summary>
-        string[] Resource { get; set; }
+        string[] Resources { get; set; }
         /// <summary>
         /// The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
         /// </summary>

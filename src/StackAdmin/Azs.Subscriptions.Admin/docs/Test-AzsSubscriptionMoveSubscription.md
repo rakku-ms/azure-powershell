@@ -14,7 +14,7 @@ Validate that user subscriptions can be moved between delegated provider offers.
 
 ### ValidateExpanded (Default)
 ```
-Test-AzsSubscriptionMoveSubscription -Resource <String[]> [-SubscriptionId <String>]
+Test-AzsSubscriptionMoveSubscription -Resources <String[]> [-SubscriptionId <String>]
  [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -35,7 +35,7 @@ Test-AzsSubscriptionMoveSubscription -InputObject <ISubscriptionsAdminIdentity>
 
 ### ValidateViaIdentityExpanded
 ```
-Test-AzsSubscriptionMoveSubscription -InputObject <ISubscriptionsAdminIdentity> -Resource <String[]>
+Test-AzsSubscriptionMoveSubscription -InputObject <ISubscriptionsAdminIdentity> -Resources <String[]>
  [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Resource
+### -Resources
 A collection of subscriptions to move to the target delegated provider offer.
 
 ```yaml
@@ -283,7 +283,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Tenant <String>]`: Directory tenant name.
 
 #### MOVESUBSCRIPTIONSDEFINITION <IMoveSubscriptionsDefinition>: The move subscriptions action definition
-  - `Resource <String[]>`: A collection of subscriptions to move to the target delegated provider offer.
+  - `Resources <String[]>`: A collection of subscriptions to move to the target delegated provider offer.
   - `[TargetDelegatedProviderOffer <String>]`: The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
 
 ## RELATED LINKS

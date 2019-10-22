@@ -22,12 +22,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
         public int? Count { get => this._count; set => this._count = value; }
 
-        /// <summary>Backing field for <see cref="ExtendedProperty" /> property.</summary>
-        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties _extendedProperty;
+        /// <summary>Backing field for <see cref="ExtendedProperties" /> property.</summary>
+        private Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties _extendedProperties;
 
         /// <summary>Extended properties.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperty { get => (this._extendedProperty = this._extendedProperty ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.MetricValueProperties()); set => this._extendedProperty = value; }
+        public Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperties { get => (this._extendedProperties = this._extendedProperties ?? new Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.MetricValueProperties()); set => this._extendedProperties = value; }
 
         /// <summary>Backing field for <see cref="Maximum" /> property.</summary>
         private double? _maximum;
@@ -90,7 +90,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"Extended properties.",
         SerializedName = @"properties",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties) })]
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperty { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperties { get; set; }
         /// <summary>Maximum value for metric sample period.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -134,7 +134,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         /// <summary>Number of measurements for metric sample period.</summary>
         int? Count { get; set; }
         /// <summary>Extended properties.</summary>
-        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperty { get; set; }
+        Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMetricValueProperties ExtendedProperties { get; set; }
         /// <summary>Maximum value for metric sample period.</summary>
         double? Maximum { get; set; }
         /// <summary>Minimum value for metric sample period.</summary>

@@ -14,13 +14,13 @@ Move subscriptions between delegated provider offers.
 
 ### MoveExpanded (Default)
 ```
-Move-AzsSubscription -Id <String> -Resource <String[]> [-TargetDelegatedProviderOffer <String>]
+Move-AzsSubscription -Resources <String[]> [-SubscriptionId <String>] [-TargetDelegatedProviderOffer <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Move
 ```
-Move-AzsSubscription -Id <String> -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition>
+Move-AzsSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity>
 
 ### MoveViaIdentityExpanded
 ```
-Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> -Resource <String[]>
+Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> -Resources <String[]>
  [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -88,22 +88,6 @@ Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Id
-Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
-
-```yaml
-Type: System.String
-Parameter Sets: Move, MoveExpanded
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -177,7 +161,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Resource
+### -Resources
 A collection of subscriptions to move to the target delegated provider offer.
 
 ```yaml
@@ -188,6 +172,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -SubscriptionId
+Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
+
+```yaml
+Type: System.String
+Parameter Sets: Move, MoveExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -281,7 +281,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Tenant <String>]`: Directory tenant name.
 
 #### MOVESUBSCRIPTIONSDEFINITION <IMoveSubscriptionsDefinition>: The move subscriptions action definition
-  - `Resource <String[]>`: A collection of subscriptions to move to the target delegated provider offer.
+  - `Resources <String[]>`: A collection of subscriptions to move to the target delegated provider offer.
   - `[TargetDelegatedProviderOffer <String>]`: The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
 
 ## RELATED LINKS

@@ -14,14 +14,14 @@ Create or update the offer delegation.
 
 ### CreateExpanded (Default)
 ```
-New-AzsOfferDelegation -Name <String> -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-Location <String>] [-PropertiesSubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+New-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] [-Location <String>] [-PropertiesSubscriptionId <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsOfferDelegation -Name <String> -Offer <String> -ResourceGroupName <String>
+New-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
  -NewOfferDelegation <IOfferDelegation> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -106,23 +106,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-AzLocation)[0].Location
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Name
-Name of a offer delegation.
-
-```yaml
-Type: System.String
-Parameter Sets: Create, CreateExpanded
-Aliases: OfferDelegationName
-
-Required: True
-Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -147,6 +131,22 @@ Dynamic: False
 
 ### -Offer
 Name of an offer.
+
+```yaml
+Type: System.String
+Parameter Sets: Create, CreateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -OfferDelegationName
+Name of a offer delegation.
 
 ```yaml
 Type: System.String

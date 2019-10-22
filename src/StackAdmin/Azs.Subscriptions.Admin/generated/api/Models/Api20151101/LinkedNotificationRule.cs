@@ -8,12 +8,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ILinkedNotificationRuleInternal
     {
 
-        /// <summary>Backing field for <see cref="Action" /> property.</summary>
-        private string[] _action;
+        /// <summary>Backing field for <see cref="Actions" /> property.</summary>
+        private string[] _actions;
 
         /// <summary>List of actions.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] Action { get => this._action; set => this._action = value; }
+        public string[] Actions { get => this._actions; set => this._actions = value; }
 
         /// <summary>Creates an new <see cref="LinkedNotificationRule" /> instance.</summary>
         public LinkedNotificationRule()
@@ -32,7 +32,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"List of actions.",
         SerializedName = @"actions",
         PossibleTypes = new [] { typeof(string) })]
-        string[] Action { get; set; }
+        string[] Actions { get; set; }
 
     }
     /// The linked notification rule.
@@ -40,7 +40,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>List of actions.</summary>
-        string[] Action { get; set; }
+        string[] Actions { get; set; }
 
     }
 }

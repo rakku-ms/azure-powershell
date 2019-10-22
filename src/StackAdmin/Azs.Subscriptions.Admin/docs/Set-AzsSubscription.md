@@ -14,16 +14,16 @@ Creates or updates the specified subscription.
 
 ### UpdateExpanded (Default)
 ```
-Set-AzsSubscription -Subscription <String> [-Id <String>] [-SubscriptionId <String>]
+Set-AzsSubscription -Subscription <String> [-SubscriptionId <String>]
  [-DelegatedProviderSubscriptionId <String>] [-DisplayName <String>] [-ExternalReferenceId <String>]
- [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
+ [-Id <String>] [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
  [-State <SubscriptionState>] [-SubscriptionId1 <String>] [-TenantId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzsSubscription -Id <String> -Subscription <String> -NewSubscription <ISubscription>
+Set-AzsSubscription -Subscription <String> -NewSubscription <ISubscription> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -117,14 +117,14 @@ Dynamic: False
 ```
 
 ### -Id
-Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
+Fully qualified identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -234,7 +234,7 @@ Subscription credentials which uniquely identify Microsoft Azure subscription.Th
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False

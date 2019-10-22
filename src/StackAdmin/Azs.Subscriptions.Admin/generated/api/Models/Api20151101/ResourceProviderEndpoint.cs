@@ -8,12 +8,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IResourceProviderEndpointInternal
     {
 
-        /// <summary>Backing field for <see cref="ApiVersion" /> property.</summary>
-        private string[] _apiVersion;
+        /// <summary>Backing field for <see cref="ApiVersions" /> property.</summary>
+        private string[] _apiVersions;
 
         /// <summary>The API versions supported by the endpoint.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] ApiVersion { get => this._apiVersion; set => this._apiVersion = value; }
+        public string[] ApiVersions { get => this._apiVersions; set => this._apiVersions = value; }
 
         /// <summary>Backing field for <see cref="Enabled" /> property.</summary>
         private bool? _enabled;
@@ -53,7 +53,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"The API versions supported by the endpoint.",
         SerializedName = @"apiVersions",
         PossibleTypes = new [] { typeof(string) })]
-        string[] ApiVersion { get; set; }
+        string[] ApiVersions { get; set; }
         /// <summary>The enabled.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -85,7 +85,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
 
     {
         /// <summary>The API versions supported by the endpoint.</summary>
-        string[] ApiVersion { get; set; }
+        string[] ApiVersions { get; set; }
         /// <summary>The enabled.</summary>
         bool? Enabled { get; set; }
         /// <summary>The endpoint uri.</summary>

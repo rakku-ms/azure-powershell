@@ -14,16 +14,16 @@ Creates or updates the specified subscription.
 
 ### CreateExpanded (Default)
 ```
-New-AzsSubscription -Subscription <String> [-Id <String>] [-SubscriptionId <String>]
+New-AzsSubscription -Subscription <String> [-SubscriptionId <String>]
  [-DelegatedProviderSubscriptionId <String>] [-DisplayName <String>] [-ExternalReferenceId <String>]
- [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
+ [-Id <String>] [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
  [-State <SubscriptionState>] [-SubscriptionId1 <String>] [-TenantId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsSubscription -Id <String> -Subscription <String> -NewSubscription <ISubscription>
+New-AzsSubscription -Subscription <String> -NewSubscription <ISubscription> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,9 +35,9 @@ New-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> -NewSubscription 
 
 ### CreateViaIdentityExpanded
 ```
-New-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> [-Id <String>] [-SubscriptionId <String>]
+New-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> [-SubscriptionId <String>]
  [-DelegatedProviderSubscriptionId <String>] [-DisplayName <String>] [-ExternalReferenceId <String>]
- [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
+ [-Id <String>] [-OfferId <String>] [-Owner <String>] [-RoutingResourceManagerType <ResourceManagerType>]
  [-State <SubscriptionState>] [-TenantId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -132,14 +132,14 @@ Dynamic: False
 ```
 
 ### -Id
-Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
+Fully qualified identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -266,7 +266,7 @@ Subscription credentials which uniquely identify Microsoft Azure subscription.Th
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False

@@ -14,12 +14,14 @@ Get a specified subscription.
 
 ### List (Default)
 ```
-Get-AzsSubscription -Id <String> [-Filter <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsSubscription [-SubscriptionId <String[]>] [-Filter <String>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsSubscription -Id <String> -Subscription <String> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsSubscription -Subscription <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -85,22 +87,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Id
-Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
-
-```yaml
-Type: System.String
-Parameter Sets: Get, List
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
@@ -129,6 +115,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -SubscriptionId
+Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
+
+```yaml
+Type: System.String[]
+Parameter Sets: Get, List
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

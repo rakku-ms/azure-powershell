@@ -36,19 +36,19 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
         public string Name { get => this._name; set => this._name = value; }
 
-        /// <summary>Backing field for <see cref="QuotaId" /> property.</summary>
-        private string[] _quotaId;
+        /// <summary>Backing field for <see cref="QuotaIds" /> property.</summary>
+        private string[] _quotaIds;
 
         /// <summary>Quota identifiers under the plan.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] QuotaId { get => this._quotaId; set => this._quotaId = value; }
+        public string[] QuotaIds { get => this._quotaIds; set => this._quotaIds = value; }
 
-        /// <summary>Backing field for <see cref="SkuId" /> property.</summary>
-        private string[] _skuId;
+        /// <summary>Backing field for <see cref="SkuIds" /> property.</summary>
+        private string[] _skuIds;
 
         /// <summary>SKU identifiers.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Origin(Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.PropertyOrigin.Owned)]
-        public string[] SkuId { get => this._skuId; set => this._skuId = value; }
+        public string[] SkuIds { get => this._skuIds; set => this._skuIds = value; }
 
         /// <summary>Backing field for <see cref="SubscriptionCount" /> property.</summary>
         private int? _subscriptionCount;
@@ -106,7 +106,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"Quota identifiers under the plan.",
         SerializedName = @"quotaIds",
         PossibleTypes = new [] { typeof(string) })]
-        string[] QuotaId { get; set; }
+        string[] QuotaIds { get; set; }
         /// <summary>SKU identifiers.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -114,7 +114,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         Description = @"SKU identifiers.",
         SerializedName = @"skuIds",
         PossibleTypes = new [] { typeof(string) })]
-        string[] SkuId { get; set; }
+        string[] SkuIds { get; set; }
         /// <summary>Subscription count.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Runtime.Info(
         Required = false,
@@ -138,9 +138,9 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api201511
         /// <summary>Name of the plan.</summary>
         string Name { get; set; }
         /// <summary>Quota identifiers under the plan.</summary>
-        string[] QuotaId { get; set; }
+        string[] QuotaIds { get; set; }
         /// <summary>SKU identifiers.</summary>
-        string[] SkuId { get; set; }
+        string[] SkuIds { get; set; }
         /// <summary>Subscription count.</summary>
         int? SubscriptionCount { get; set; }
 
