@@ -14,13 +14,13 @@ Get a specific update at an update location.
 
 ### List (Default)
 ```
-Get-AzsUpdate -ResourceGroupName <String> [-Location <String>] [-SubscriptionId <String[]>]
+Get-AzsUpdate [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsUpdate -Name <String> -ResourceGroupName <String> [-Location <String>] [-SubscriptionId <String[]>]
+Get-AzsUpdate -Name <String> [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -93,7 +93,7 @@ The name of the update location.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases: UpdateLocation
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ Name of the update.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: UpdateName
+Aliases:
 
 Required: True
 Position: Named
@@ -127,9 +127,9 @@ Type: System.String
 Parameter Sets: Get, List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: -join("System.",(Get-AzLocation)[0].Name)
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

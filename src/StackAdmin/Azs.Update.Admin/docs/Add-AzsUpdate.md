@@ -14,7 +14,7 @@ Apply a specific update at an update location.
 
 ### Apply (Default)
 ```
-Add-AzsUpdate -Name <String> -ResourceGroupName <String> [-Location <String>] [-SubscriptionId <String>]
+Add-AzsUpdate -Name <String> [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -104,7 +104,7 @@ The name of the update location.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases: UpdateLocation
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Name of the update.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases: UpdateName
+Aliases:
 
 Required: True
 Position: Named
@@ -154,9 +154,9 @@ Type: System.String
 Parameter Sets: Apply
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: -join("System.",(Get-AzLocation)[0].Name)
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

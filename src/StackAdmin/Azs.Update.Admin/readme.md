@@ -58,4 +58,39 @@ module-name: Azs.Update.Admin
 csproj: Azs.Update.Admin.csproj 
 psd1: Azs.Update.Admin.psd1 
 psm1: Azs.Update.Admin.psm1
+sanitize-names: true
+```
+
+### Parameter default values
+``` yaml
+directive:
+  - where:
+      parameter-name: UpdateLocation
+    set:
+      parameter-name: Location
+  - where:
+      parameter-name: ResourceGroupName
+    set:
+      default:
+        script: -join("System.",(Get-AzLocation)[0].Name)
+  - where:
+      subject: Update 
+      parameter-name: Location
+    clear-alias: true
+  - where:
+      subject: Update 
+      parameter-name: Name
+    clear-alias: true
+  - where:
+      subject: UpdateLocation 
+      parameter-name: Location
+    set:
+      parameter-name: Name
+      default:
+        script: (Get-AzLocation)[0].Name
+  - where:
+      subject: (.*)Run$
+      parameter-name: RunName
+    set:
+      parameter-name: Name
 ```

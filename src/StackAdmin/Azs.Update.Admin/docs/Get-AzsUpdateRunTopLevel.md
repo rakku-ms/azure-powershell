@@ -14,13 +14,13 @@ Get an instance of update run using the ID.
 
 ### List (Default)
 ```
-Get-AzsUpdateRunTopLevel -ResourceGroupName <String> -UpdateLocation <String> [-SubscriptionId <String[]>]
+Get-AzsUpdateRunTopLevel [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsUpdateRunTopLevel -ResourceGroupName <String> -RunName <String> -UpdateLocation <String>
+Get-AzsUpdateRunTopLevel -RunName <String> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -87,6 +87,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Location
+The name of the update location.
+
+```yaml
+Type: System.String
+Parameter Sets: Get, List
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzLocation)[0].Name
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -ResourceGroupName
 Resource group name.
 
@@ -95,9 +111,9 @@ Type: System.String
 Parameter Sets: Get, List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: -join("System.",(Get-AzLocation)[0].Name)
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -131,22 +147,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -UpdateLocation
-The name of the update location.
-
-```yaml
-Type: System.String
-Parameter Sets: Get, List
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

@@ -14,13 +14,13 @@ Get an instance of update run using the ID.
 
 ### List (Default)
 ```
-Get-AzsUpdateRun -ResourceGroupName <String> -UpdateLocation <String> -UpdateName <String>
+Get-AzsUpdateRun -UpdateName <String> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsUpdateRun -ResourceGroupName <String> -RunName <String> -UpdateLocation <String> -UpdateName <String>
+Get-AzsUpdateRun -Name <String> -UpdateName <String> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -87,23 +87,23 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -ResourceGroupName
-Resource group name.
+### -Location
+The name of the update location.
 
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -RunName
+### -Name
 Update run identifier.
 
 ```yaml
@@ -114,6 +114,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -ResourceGroupName
+Resource group name.
+
+```yaml
+Type: System.String
+Parameter Sets: Get, List
+Aliases:
+
+Required: False
+Position: Named
+Default value: -join("System.",(Get-AzLocation)[0].Name)
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -131,22 +147,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -UpdateLocation
-The name of the update location.
-
-```yaml
-Type: System.String
-Parameter Sets: Get, List
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
