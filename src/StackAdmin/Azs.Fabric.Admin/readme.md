@@ -58,3 +58,13 @@ module-name: Azs.Fabric.Admin
 csproj: Azs.Fabric.Admin.csproj 
 psd1: Azs.Fabric.Admin.psd1 
 psm1: Azs.Fabric.Admin.psm1
+
+### Parameter default values
+``` yaml
+directive:
+  - where:
+      parameter-name: ResourceGroupName
+    set:
+      default:
+        script: -join("System.",(Get-AzLocation)[0].Name)
+```

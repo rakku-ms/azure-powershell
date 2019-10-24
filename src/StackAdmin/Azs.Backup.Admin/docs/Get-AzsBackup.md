@@ -129,7 +129,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: None
+Default value: -join("System.",(Get-AzLocation)[0].Name)
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

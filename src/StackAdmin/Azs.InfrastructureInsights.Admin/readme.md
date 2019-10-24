@@ -59,3 +59,13 @@ module-name: Azs.InfrastructureInsights.Admin
 csproj: Azs.InfrastructureInsights.Admin.csproj 
 psd1: Azs.InfrastructureInsights.Admin.psd1 
 psm1: Azs.InfrastructureInsights.Admin.psm1
+
+### Parameter default values
+``` yaml
+directive:
+  - where:
+      parameter-name: ResourceGroupName
+    set:
+      default:
+        script: -join("System.",(Get-AzLocation)[0].Name)
+```
