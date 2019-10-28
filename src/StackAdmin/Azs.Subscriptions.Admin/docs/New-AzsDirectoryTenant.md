@@ -14,14 +14,14 @@ Create or updates a directory tenant.
 
 ### CreateExpanded (Default)
 ```
-New-AzsDirectoryTenant -ResourceGroupName <String> -Tenant <String> [-SubscriptionId <String>]
+New-AzsDirectoryTenant -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-Location <String>] [-TenantId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsDirectoryTenant -ResourceGroupName <String> -Tenant <String> -NewTenant <IDirectoryTenant>
+New-AzsDirectoryTenant -Name <String> -ResourceGroupName <String> -NewTenant <IDirectoryTenant>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -111,6 +111,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Directory tenant name.
+
+```yaml
+Type: System.String
+Parameter Sets: Create, CreateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -NewTenant
 Directory tenant.
 To construct, see NOTES section for NEWTENANT properties and create a hash table.
@@ -155,22 +171,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Tenant
-Directory tenant name.
-
-```yaml
-Type: System.String
-Parameter Sets: Create, CreateExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

@@ -14,14 +14,14 @@ Links a plan to an offer.
 
 ### LinkExpanded (Default)
 ```
-Invoke-AzsLinkOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+Invoke-AzsLinkOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-MaxAcquisitionCount <Int32>] [-PlanLinkType <PlanLinkType>] [-PlanName <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Link
 ```
-Invoke-AzsLinkOffer -Offer <String> -ResourceGroupName <String> -PlanLink <IPlanLinkDefinition>
+Invoke-AzsLinkOffer -Name <String> -ResourceGroupName <String> -PlanLink <IPlanLinkDefinition>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -Name
 Name of an offer.
 
 ```yaml

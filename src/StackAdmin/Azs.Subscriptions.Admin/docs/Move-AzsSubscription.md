@@ -14,8 +14,9 @@ Move subscriptions between delegated provider offers.
 
 ### MoveExpanded (Default)
 ```
-Move-AzsSubscription -Resources <String[]> [-SubscriptionId <String>] [-TargetDelegatedProviderOffer <String>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Move-AzsSubscription -ResourceId <String[]> [-SubscriptionId <String>]
+ [-DestinationDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Move
@@ -33,8 +34,8 @@ Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity>
 
 ### MoveViaIdentityExpanded
 ```
-Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> -Resources <String[]>
- [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+Move-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> -ResourceId <String[]>
+ [-DestinationDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -86,6 +87,22 @@ The credentials, account, tenant, and subscription used for communication with A
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -DestinationDelegatedProviderOffer
+The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
+
+```yaml
+Type: System.String
+Parameter Sets: MoveExpanded, MoveViaIdentityExpanded
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +178,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Resources
+### -ResourceId
 A collection of subscriptions to move to the target delegated provider offer.
 
 ```yaml
@@ -188,22 +205,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -TargetDelegatedProviderOffer
-The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
-
-```yaml
-Type: System.String
-Parameter Sets: MoveExpanded, MoveViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

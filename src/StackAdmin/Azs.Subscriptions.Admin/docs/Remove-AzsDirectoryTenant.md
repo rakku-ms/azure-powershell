@@ -14,7 +14,7 @@ Delete a directory tenant under a resource group.
 
 ### Delete (Default)
 ```
-Remove-AzsDirectoryTenant -ResourceGroupName <String> -Tenant <String> [-SubscriptionId <String>]
+Remove-AzsDirectoryTenant -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -82,6 +82,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Directory tenant name.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -PassThru
 Returns true when the command succeeds
 
@@ -125,22 +141,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Tenant
-Directory tenant name.
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

@@ -14,7 +14,7 @@ Delete the specified plan.
 
 ### Delete (Default)
 ```
-Remove-AzsPlan -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+Remove-AzsPlan -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -82,6 +82,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Name of the plan.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -PassThru
 Returns true when the command succeeds
 
@@ -91,22 +107,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Plan
-Name of the plan.
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

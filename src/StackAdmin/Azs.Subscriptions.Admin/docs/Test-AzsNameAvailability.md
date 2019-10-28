@@ -1,31 +1,44 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/remove-azssubscription
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/test-azsnameavailability
 schema: 2.0.0
 ---
 
-# Remove-AzsSubscription
+# Test-AzsNameAvailability
 
 ## SYNOPSIS
-Delete the specified subscription.
+Get the list of subscriptions.
 
 ## SYNTAX
 
-### Delete (Default)
+### CheckExpanded (Default)
 ```
-Remove-AzsSubscription -Subscription <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Test-AzsNameAvailability [-SubscriptionId <String>] [-Name <String>] [-ResourceType <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### DeleteViaIdentity
+### Check
 ```
-Remove-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+Test-AzsNameAvailability -NameAvailabilityDefinition <ICheckNameAvailabilityDefinition>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### CheckViaIdentity
+```
+Test-AzsNameAvailability -InputObject <ISubscriptionsAdminIdentity>
+ -NameAvailabilityDefinition <ICheckNameAvailabilityDefinition> [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### CheckViaIdentityExpanded
+```
+Test-AzsNameAvailability -InputObject <ISubscriptionsAdminIdentity> [-Name <String>] [-ResourceType <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete the specified subscription.
+Get the list of subscriptions.
 
 ## EXAMPLES
 
@@ -71,7 +84,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
-Parameter Sets: DeleteViaIdentity
+Parameter Sets: CheckViaIdentity, CheckViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -82,12 +95,12 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -PassThru
-Returns true when the command succeeds
+### -Name
+The resource name to verify.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -98,15 +111,32 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Subscription
-Subscription parameter.
+### -NameAvailabilityDefinition
+The check name availability action definition.
+To construct, see NOTES section for NAMEAVAILABILITYDEFINITION properties and create a hash table.
 
 ```yaml
-Type: System.String
-Parameter Sets: Delete
+Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ICheckNameAvailabilityDefinition
+Parameter Sets: Check, CheckViaIdentity
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -ResourceType
+The resource type to verify.
+
+```yaml
+Type: System.String
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -119,7 +149,7 @@ Subscription credentials which uniquely identify Microsoft Azure subscription.Th
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Check, CheckExpanded
 Aliases:
 
 Required: False
@@ -168,11 +198,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ICheckNameAvailabilityDefinition
+
 ### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ICheckNameAvailabilityResponse
 
 ## ALIASES
 
@@ -198,6 +230,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
   - `[TargetSubscriptionId <String>]`: The target subscription ID.
   - `[Tenant <String>]`: Directory tenant name.
+
+#### NAMEAVAILABILITYDEFINITION <ICheckNameAvailabilityDefinition>: The check name availability action definition.
+  - `[Name <String>]`: The resource name to verify.
+  - `[ResourceType <String>]`: The resource type to verify.
 
 ## RELATED LINKS
 

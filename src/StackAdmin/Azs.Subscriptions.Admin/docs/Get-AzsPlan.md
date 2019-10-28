@@ -19,7 +19,7 @@ Get-AzsPlan [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonPa
 
 ### Get
 ```
-Get-AzsPlan -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+Get-AzsPlan -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Plan
+### -Name
 Name of the plan.
 
 ```yaml

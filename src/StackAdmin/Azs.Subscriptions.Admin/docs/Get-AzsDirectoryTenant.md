@@ -20,7 +20,7 @@ Get-AzsDirectoryTenant -ResourceGroupName <String> [-SubscriptionId <String[]>] 
 
 ### Get
 ```
-Get-AzsDirectoryTenant -ResourceGroupName <String> -Tenant <String> [-SubscriptionId <String[]>]
+Get-AzsDirectoryTenant -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -88,6 +88,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Directory tenant name.
+
+```yaml
+Type: System.String
+Parameter Sets: Get
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -ResourceGroupName
 The resource group the resource is located under.
 
@@ -115,22 +131,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Tenant
-Directory tenant name.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

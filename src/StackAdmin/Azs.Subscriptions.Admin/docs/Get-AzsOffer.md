@@ -19,7 +19,7 @@ Get-AzsOffer [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonP
 
 ### Get
 ```
-Get-AzsOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+Get-AzsOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -Name
 Name of an offer.
 
 ```yaml

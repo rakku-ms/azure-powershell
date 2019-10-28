@@ -14,13 +14,13 @@ Get the specified offer delegation.
 
 ### List (Default)
 ```
-Get-AzsOfferDelegation -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+Get-AzsOfferDelegation -OfferName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
+Get-AzsOfferDelegation -Name <String> -OfferName <String> -ResourceGroupName <String>
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -88,12 +88,12 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
-Name of an offer.
+### -Name
+Name of a offer delegation.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -104,12 +104,12 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -OfferDelegationName
-Name of a offer delegation.
+### -OfferName
+Name of an offer.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, List
 Aliases:
 
 Required: True

@@ -13,7 +13,7 @@ Get the metric definitions of the specified plan.
 ## SYNTAX
 
 ```
-Get-AzsPlanMetricDefinition -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+Get-AzsPlanMetricDefinition -PlanName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Plan
+### -PlanName
 Name of the plan.
 
 ```yaml

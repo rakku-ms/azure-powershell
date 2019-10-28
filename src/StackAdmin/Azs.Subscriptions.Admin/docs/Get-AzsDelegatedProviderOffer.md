@@ -14,14 +14,14 @@ Get the specified delegated provider offer.
 
 ### List (Default)
 ```
-Get-AzsDelegatedProviderOffer -DelegatedProviderSubscriptionId <String> [-SubscriptionId <String[]>]
+Get-AzsDelegatedProviderOffer -DelegatedProviderId <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsDelegatedProviderOffer -DelegatedProviderSubscriptionId <String> -Offer <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsDelegatedProviderOffer -DelegatedProviderId <String> -Name <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -DelegatedProviderSubscriptionId
+### -DelegatedProviderId
 Delegated provider subscription identifier.
 
 ```yaml
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -Name
 Name of an offer.
 
 ```yaml

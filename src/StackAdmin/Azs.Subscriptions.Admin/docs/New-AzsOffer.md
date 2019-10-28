@@ -14,8 +14,8 @@ Create or update the offer.
 
 ### CreateExpanded (Default)
 ```
-New-AzsOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-AddonPlans <IAddonPlanDefinition[]>] [-BasePlanIds <String[]>] [-Description <String>]
+New-AzsOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ [-AddonPlanDefinition <IAddonPlanDefinition[]>] [-BasePlanIds <String[]>] [-Description <String>]
  [-DisplayName <String>] [-ExternalReferenceId <String>] [-Location <String>]
  [-MaxSubscriptionsPerAccount <Int32>] [-PropertiesName <String>] [-State <AccessibilityState>]
  [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -23,7 +23,7 @@ New-AzsOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <Strin
 
 ### Create
 ```
-New-AzsOffer -Offer <String> -ResourceGroupName <String> -NewOffer <IOffer> [-SubscriptionId <String>]
+New-AzsOffer -Name <String> -ResourceGroupName <String> -NewOffer <IOffer> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ New-AzsOffer -InputObject <ISubscriptionsAdminIdentity> -NewOffer <IOffer> [-Def
 
 ### CreateViaIdentityExpanded
 ```
-New-AzsOffer -InputObject <ISubscriptionsAdminIdentity> [-AddonPlans <IAddonPlanDefinition[]>]
+New-AzsOffer -InputObject <ISubscriptionsAdminIdentity> [-AddonPlanDefinition <IAddonPlanDefinition[]>]
  [-BasePlanIds <String[]>] [-Description <String>] [-DisplayName <String>] [-ExternalReferenceId <String>]
  [-Location <String>] [-MaxSubscriptionsPerAccount <Int32>] [-PropertiesName <String>]
  [-State <AccessibilityState>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
@@ -67,9 +67,9 @@ PS C:\> {{ Add code here }}
 
 ## PARAMETERS
 
-### -AddonPlans
+### -AddonPlanDefinition
 References to add-on plans that a tenant can optionally acquire as a part of the offer.
-To construct, see NOTES section for ADDONPLANS properties and create a hash table.
+To construct, see NOTES section for ADDONPLANDEFINITION properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[]
@@ -213,6 +213,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Name of an offer.
+
+```yaml
+Type: System.String
+Parameter Sets: Create, CreateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -NewOffer
 Represents an offering of services against which a subscription can be created.
 To construct, see NOTES section for NEWOFFER properties and create a hash table.
@@ -226,22 +242,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Offer
-Name of an offer.
-
-```yaml
-Type: System.String
-Parameter Sets: Create, CreateExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
 ```
@@ -288,7 +288,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Private
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -379,7 +379,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### ADDONPLANS <IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
+#### ADDONPLANDEFINITION <IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
   - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
   - `[PlanId <String>]`: Plan identifier.
 

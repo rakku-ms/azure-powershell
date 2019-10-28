@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azssubscription
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azsusersubscription
 schema: 2.0.0
 ---
 
-# Get-AzsSubscription
+# Get-AzsUserSubscription
 
 ## SYNOPSIS
 Get a specified subscription.
@@ -14,19 +14,19 @@ Get a specified subscription.
 
 ### List (Default)
 ```
-Get-AzsSubscription [-SubscriptionId <String[]>] [-Filter <String>] [-DefaultProfile <PSObject>]
+Get-AzsUserSubscription [-SubscriptionId <String[]>] [-Filter <String>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzsSubscription -Subscription <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzsUserSubscription -TargetSubscriptionId <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzsSubscription -InputObject <ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>]
+Get-AzsUserSubscription -InputObject <ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -104,22 +104,6 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Subscription
-Subscription parameter.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -SubscriptionId
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
@@ -131,6 +115,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -TargetSubscriptionId
+Subscription parameter.
+
+```yaml
+Type: System.String
+Parameter Sets: Get
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False

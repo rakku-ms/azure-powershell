@@ -20,7 +20,7 @@ Get-AzsQuota [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile 
 
 ### Get
 ```
-Get-AzsQuota -Quota <String> [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+Get-AzsQuota -Name <String> [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Quota
+### -Name
 Name of the quota.
 
 ```yaml

@@ -14,7 +14,7 @@ Delete the specified offer.
 
 ### Delete (Default)
 ```
-Remove-AzsOffer -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+Remove-AzsOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -Name
 Name of an offer.
 
 ```yaml

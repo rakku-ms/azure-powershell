@@ -19,8 +19,8 @@ Get-AzsDelegatedProvider [-SubscriptionId <String[]>] [-DefaultProfile <PSObject
 
 ### Get
 ```
-Get-AzsDelegatedProvider -DelegatedProvider <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzsDelegatedProvider -DelegatedProviderId <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -DelegatedProvider
+### -DelegatedProviderId
 DelegatedProvider identifier.
 
 ```yaml

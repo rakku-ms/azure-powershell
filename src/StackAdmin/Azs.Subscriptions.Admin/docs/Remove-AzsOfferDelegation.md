@@ -14,7 +14,7 @@ Delete the specified offer delegation.
 
 ### Delete (Default)
 ```
-Remove-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
+Remove-AzsOfferDelegation -Name <String> -OfferName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -82,8 +82,8 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
-Name of an offer.
+### -Name
+Name of a offer delegation.
 
 ```yaml
 Type: System.String
@@ -98,8 +98,8 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -OfferDelegationName
-Name of a offer delegation.
+### -OfferName
+Name of an offer.
 
 ```yaml
 Type: System.String

@@ -14,14 +14,14 @@ Create or update the offer delegation.
 
 ### UpdateExpanded (Default)
 ```
-Set-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
+Set-AzsOfferDelegation -Name <String> -OfferName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-Location <String>] [-PropertiesSubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzsOfferDelegation -Offer <String> -OfferDelegationName <String> -ResourceGroupName <String>
+Set-AzsOfferDelegation -Name <String> -OfferName <String> -ResourceGroupName <String>
  -NewOfferDelegation <IOfferDelegation> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -83,6 +83,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Name of a offer delegation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -NewOfferDelegation
 Offer delegation.
 To construct, see NOTES section for NEWOFFERDELEGATION properties and create a hash table.
@@ -100,24 +116,8 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -OfferName
 Name of an offer.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -OfferDelegationName
-Name of a offer delegation.
 
 ```yaml
 Type: System.String

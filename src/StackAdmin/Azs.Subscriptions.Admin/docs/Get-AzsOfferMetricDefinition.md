@@ -13,7 +13,7 @@ Get the metric definitions.
 ## SYNTAX
 
 ```
-Get-AzsOfferMetricDefinition -Offer <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+Get-AzsOfferMetricDefinition -OfferName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Offer
+### -OfferName
 Name of an offer.
 
 ```yaml

@@ -14,7 +14,7 @@ Create or update the plan.
 
 ### UpdateExpanded (Default)
 ```
-Set-AzsPlan -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-Description <String>]
+Set-AzsPlan -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-Description <String>]
  [-DisplayName <String>] [-ExternalReferenceId <String>] [-Location <String>] [-PropertiesName <String>]
  [-QuotaIds <String[]>] [-SkuIds <String[]>] [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -22,7 +22,7 @@ Set-AzsPlan -Plan <String> -ResourceGroupName <String> [-SubscriptionId <String>
 
 ### Update
 ```
-Set-AzsPlan -Plan <String> -ResourceGroupName <String> -NewPlan <IPlan> [-SubscriptionId <String>]
+Set-AzsPlan -Name <String> -ResourceGroupName <String> -NewPlan <IPlan> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -131,6 +131,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+Name of the plan.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -NewPlan
 A plan represents a package of quotas and capabilities that are offered tenants.
 A tenant can acquire this plan through an offer to upgrade his access to underlying cloud services.
@@ -145,22 +161,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Plan
-Name of the plan.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
 ```

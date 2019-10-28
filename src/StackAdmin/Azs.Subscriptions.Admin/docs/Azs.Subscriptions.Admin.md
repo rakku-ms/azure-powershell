@@ -56,7 +56,7 @@ Get the metric definitions of the specified plan.
 ### [Get-AzsQuota](Get-AzsQuota.md)
 Gets a quota by name.
 
-### [Get-AzsSubscription](Get-AzsSubscription.md)
+### [Get-AzsUserSubscription](Get-AzsUserSubscription.md)
 Get a specified subscription.
 
 ### [Invoke-AzsLinkOffer](Invoke-AzsLinkOffer.md)
@@ -104,7 +104,7 @@ Delete the specified offer delegation.
 ### [Remove-AzsPlan](Remove-AzsPlan.md)
 Delete the specified plan.
 
-### [Remove-AzsSubscription](Remove-AzsSubscription.md)
+### [Remove-AzsUserSubscription](Remove-AzsUserSubscription.md)
 Delete the specified subscription.
 
 ### [Restore-AzsSubscriptionData](Restore-AzsSubscriptionData.md)
@@ -128,14 +128,14 @@ Create or update the plan.
 ### [Set-AzsSubscription](Set-AzsSubscription.md)
 Creates or updates the specified subscription.
 
-### [Test-AzsSubscriptionIdentityHealth](Test-AzsSubscriptionIdentityHealth.md)
-Checks the identity health
-
-### [Test-AzsSubscriptionMoveSubscription](Test-AzsSubscriptionMoveSubscription.md)
+### [Test-AzsMoveSubscription](Test-AzsMoveSubscription.md)
 Validate that user subscriptions can be moved between delegated provider offers.
 
-### [Test-AzsSubscriptionNameAvailability](Test-AzsSubscriptionNameAvailability.md)
+### [Test-AzsNameAvailability](Test-AzsNameAvailability.md)
 Get the list of subscriptions.
+
+### [Test-AzsSubscriptionIdentityHealth](Test-AzsSubscriptionIdentityHealth.md)
+Checks the identity health
 
 ### [Update-AzsSubscriptionEncryption](Update-AzsSubscriptionEncryption.md)
 Update the encryption settings.

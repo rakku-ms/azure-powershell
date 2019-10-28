@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/test-azssubscriptionmovesubscription
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/test-azsmovesubscription
 schema: 2.0.0
 ---
 
-# Test-AzsSubscriptionMoveSubscription
+# Test-AzsMoveSubscription
 
 ## SYNOPSIS
 Validate that user subscriptions can be moved between delegated provider offers.
@@ -14,29 +14,29 @@ Validate that user subscriptions can be moved between delegated provider offers.
 
 ### ValidateExpanded (Default)
 ```
-Test-AzsSubscriptionMoveSubscription -Resources <String[]> [-SubscriptionId <String>]
- [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+Test-AzsMoveSubscription -ResourceId <String[]> [-SubscriptionId <String>]
+ [-DestinationDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Validate
 ```
-Test-AzsSubscriptionMoveSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition>
+Test-AzsMoveSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ValidateViaIdentity
 ```
-Test-AzsSubscriptionMoveSubscription -InputObject <ISubscriptionsAdminIdentity>
+Test-AzsMoveSubscription -InputObject <ISubscriptionsAdminIdentity>
  -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ValidateViaIdentityExpanded
 ```
-Test-AzsSubscriptionMoveSubscription -InputObject <ISubscriptionsAdminIdentity> -Resources <String[]>
- [-TargetDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+Test-AzsMoveSubscription -InputObject <ISubscriptionsAdminIdentity> -ResourceId <String[]>
+ [-DestinationDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -88,6 +88,22 @@ The credentials, account, tenant, and subscription used for communication with A
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -DestinationDelegatedProviderOffer
+The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
+
+```yaml
+Type: System.String
+Parameter Sets: ValidateExpanded, ValidateViaIdentityExpanded
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +179,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Resources
+### -ResourceId
 A collection of subscriptions to move to the target delegated provider offer.
 
 ```yaml
@@ -190,22 +206,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -TargetDelegatedProviderOffer
-The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
-
-```yaml
-Type: System.String
-Parameter Sets: ValidateExpanded, ValidateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
