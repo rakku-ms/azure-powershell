@@ -14,7 +14,7 @@ Delete an existing quota
 
 ### Delete (Default)
 ```
-Remove-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String>]
+Remove-AzsStorageQuota -Name <String> [-Location <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -98,6 +98,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+The name of the storage quota.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -PassThru
 Returns true when the command succeeds
 
@@ -107,22 +123,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -QuotaName
-The name of the storage quota.
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -14,14 +14,13 @@ Create or update an existing storage quota.
 
 ### UpdateExpanded (Default)
 ```
-Set-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String>]
- [-CapacityInGb <Int32>] [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Set-AzsStorageQuota -Name <String> [-Location <String>] [-SubscriptionId <String>] [-CapacityInGb <Int32>]
+ [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzsStorageQuota -QuotaName <String> -QuotaObject <IStorageQuota> [-Location <String>]
+Set-AzsStorageQuota -Name <String> -QuotaObject <IStorageQuota> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -98,6 +97,22 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
+### -Name
+The name of the storage quota.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
 ### -NumberOfStorageAccount
 Total number of storage accounts.
 
@@ -107,22 +122,6 @@ Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -QuotaName
-The name of the storage quota.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -20,7 +20,7 @@ Get-AzsStorageQuota [-Location <String>] [-SubscriptionId <String[]>] [-DefaultP
 
 ### Get
 ```
-Get-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String[]>]
+Get-AzsStorageQuota -Name <String> [-Location <String>] [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -QuotaName
+### -Name
 The name of the storage quota.
 
 ```yaml

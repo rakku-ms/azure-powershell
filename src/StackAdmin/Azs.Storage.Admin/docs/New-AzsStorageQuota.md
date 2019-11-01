@@ -14,14 +14,13 @@ Create or update an existing storage quota.
 
 ### CreateExpanded (Default)
 ```
-New-AzsStorageQuota -QuotaName <String> [-Location <String>] [-SubscriptionId <String>]
- [-CapacityInGb <Int32>] [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+New-AzsStorageQuota -Name <String> [-Location <String>] [-SubscriptionId <String>] [-CapacityInGb <Int32>]
+ [-NumberOfStorageAccount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsStorageQuota -QuotaName <String> -QuotaObject <IStorageQuota> [-Location <String>]
+New-AzsStorageQuota -Name <String> -QuotaObject <IStorageQuota> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -72,7 +71,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 500
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -127,23 +126,7 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -NumberOfStorageAccount
-Total number of storage accounts.
-
-```yaml
-Type: System.Int32
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -QuotaName
+### -Name
 The name of the storage quota.
 
 ```yaml
@@ -154,6 +137,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
+```
+
+### -NumberOfStorageAccount
+Total number of storage accounts.
+
+```yaml
+Type: System.Int32
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: 20
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
